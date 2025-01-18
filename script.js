@@ -1,107 +1,122 @@
 // Character data
 const characters = [
-// Gohan's
-    { name: "GOHAN (ADULT) [BASE]", rushChains: ["flying kicks", "gut punch", "ki blast cannon", "gut punch"], skills: ["wild sense", "full power"] },
-    { name: "GOHAN (ADULT) [SSJ]", rushChains: ["flying kicks", "gut punch", "ki blast cannon", "gut punch"], skills: ["explosive wave", "full power"] },
-    { name: "GOHAN (ADULT) [SSJ2]", rushChains: ["flying kicks", "rolling hammer", "ki blast cannon", "gut punch"], skills: ["explosive wave", "instant spark"] },
-
-// Vegeta's
+    { 
+        name: "GOHAN (ADULT) [BASE]", 
+        rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Gut Punch"], 
+        skills: ["Wild Sense", "Full Power"] 
+    },
+    { 
+        name: "GOHAN (ADULT) [SSJ]", 
+        rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Gut Punch"], 
+        skills: ["Explosive Wave", "Full Power"] 
+    },
+    { 
+        name: "GOHAN (ADULT) [SSJ2]", 
+        rushChains: ["Flying Kicks", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"], 
+        skills: ["Explosive Wave", "Instant Spark"] 
+    },
+    // Vegeta's
     { 
         name: "VEGETA (SCOUTER)", 
-        rushChains: ["gut punch", "Flying Kicks", "Rush Ki Wave", "gut punch"],
-        skills: ["Explosive Wave", "Buff"]
+        rushChains: ["Gut Punch", "Flying Kicks", "Rush Ki Wave", "Gut Punch"], 
+        skills: ["Explosive Wave", "Buff"] 
     },
     { 
         name: "VEGETA (Z - EARLY) [BASE]", 
-        rushChains: ["Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks", "gut punch"],
-        skills: ["Explosive Wave", "Instant Spark"]
+        rushChains: ["Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks", "Gut Punch"], 
+        skills: ["Explosive Wave", "Instant Spark"] 
     },
     { 
         name: "VEGETA (Z - EARLY) [SSJ]", 
-        rushChains: ["Ki Blast Cannon", "gut punch", "Flying Kicks", "Rush Ki Wave"],
-        skills: ["Explosive Wave", "Buff"]
+        rushChains: ["Ki Blast Cannon", "Gut Punch", "Flying Kicks", "Rush Ki Wave"], 
+        skills: ["Explosive Wave", "Buff"] 
     },
     { 
         name: "VEGETA (Z - EARLY) [SV]", 
-        rushChains: ["blaster wave", "Rolling Hammer", "Rush Ki Wave", "gut punch"],
-        skills: ["Explosive Wave", "Instant Spark"]
+        rushChains: ["Blaster Wave", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"], 
+        skills: ["Explosive Wave", "Instant Spark"] 
     },
     { 
         name: "VEGETA (Z - END) [BASE]", 
-        rushChains: ["gut punch", "rush ki wave", "ki blast cannon", "gut punch"], 
-        skills: ["afterimage", "buff"] 
+        rushChains: ["Gut Punch", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"], 
+        skills: ["Afterimage", "Buff"] 
     },
     { 
         name: "VEGETA (Z - END) [SSJ]", 
-        rushChains: ["flying kicks", "gut punch", "rush ki wave", "ki blast cannon"], 
-        skills: ["explosive wave", "buff"] 
+        rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Ki Blast Cannon"], 
+        skills: ["Explosive Wave", "Buff"] 
     },
     { 
         name: "VEGETA (Z - END) [SSJ2]", 
-        rushChains: ["flying kicks", "rolling hammer", "rush ki wave", "gut punch"], 
-        skills: ["explosive wave", "wild sense"] 
+        rushChains: ["Flying Kicks", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"], 
+        skills: ["Explosive Wave", "Wild Sense"] 
     },
     { 
         name: "VEGETA (Z - END) [MAJIN]", 
-        rushChains: ["gut punch", "gut punch", "Ki Blast Cannon", "Rush Ki Wave"],
-        skills: ["Buff", "Instant Spark"]
+        rushChains: ["Gut Punch", "Gut Punch", "Ki Blast Cannon", "Rush Ki Wave"], 
+        skills: ["Buff", "Instant Spark"] 
     },
     { 
         name: "VEGETA (GT) [SSJ4]", 
-        rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "gut punch"],
-        skills: ["Explosive Wave", "buff"]
+        rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"], 
+        skills: ["Explosive Wave", "Buff"] 
     },
     { 
         name: "VEGETA (SUPER) [BASE]", 
-        rushChains: ["Ki Blast Cannon", "gut punch", "Flying Kicks", "Rush Ki Wave"],
-        skills: ["Explosive Wave", "instant spark"]
+        rushChains: ["Ki Blast Cannon", "Gut Punch", "Flying Kicks", "Rush Ki Wave"], 
+        skills: ["Explosive Wave", "Instant Spark"] 
     },
     { 
         name: "VEGETA (SUPER) [SSJ]", 
-        rushChains: ["gut punch", "Rush Ki Wave", "Ki Blast Cannon", "gut punch"],
-        skills: ["buff", "Instant Spark"]
+        rushChains: ["Gut Punch", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"], 
+        skills: ["Buff", "Instant Spark"] 
     },
     { 
         name: "VEGETA (SUPER) [SSJ GOD]", 
-        rushChains: ["Flying Kicks", "gut punch", "Rush Ki Wave", "Ki Blast Cannon"],
-        skills: ["Explosive Wave", "Instant Spark"]
+        rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Ki Blast Cannon"], 
+        skills: ["Explosive Wave", "Instant Spark"] 
     },
     { 
         name: "VEGETA (SUPER) [SSJ GOD SS]", 
-        rushChains: ["Flying Kicks", "gut punch", "Rush Ki Wave", "gut punch"],
-        skills: ["buff", "buff"]
+        rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Gut Punch"], 
+        skills: ["Buff", "Buff"] 
     },
     { 
         name: "CABBA [BASE]", 
-        rushChains: ["Flying Kicks", "Flying Kicks", "gut punch", "Ki Blast Cannon"],
-        skills: ["Explosive Wave", "Full Power"]
+        rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Ki Blast Cannon"], 
+        skills: ["Explosive Wave", "Full Power"] 
     },
     { 
         name: "CABBA [SSJ]", 
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "gut punch"],
-        skills: ["Explosive Wave", "Wild Sense"]
+        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "Gut Punch"], 
+        skills: ["Explosive Wave", "Wild Sense"] 
     },
     { 
         name: "CABBA [SSJ2]", 
-        rushChains: ["gut punch", "Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks"],
-        skills: ["Explosive Wave", "Instant Spark"]
+        rushChains: ["Gut Punch", "Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks"], 
+        skills: ["Explosive Wave", "Instant Spark"] 
     },
     { 
         name: "BABY VEGETA (GT)", 
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "gut punch"],
-        skills: ["Explosive Wave", "buff"]
+        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "Gut Punch"], 
+        skills: ["Explosive Wave", "Buff"] 
     },
     { 
         name: "SUPER BABY 1 (GT)", 
-        rushChains: ["Flying Kicks", "Rush Ki Wave", "Ki Blast Cannon", "gut punch"],
-        skills: ["Afterimage", "buff"]
+        rushChains: ["Flying Kicks", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"], 
+        skills: ["Afterimage", "Buff"] 
     },
     { 
         name: "SUPER BABY 2 (GT)", 
-        rushChains: ["Flying Kicks", "gut punch", "Rolling Hammer", "Rush Ki Wave"],
-        skills: ["Explosive Wave", "Full Power"]
+        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"], 
+        skills: ["Explosive Wave", "Full Power"] 
     }
-];
+]; 
+
+
+// Variables for pagination
+let itemsPerPage = 300; // Default items per page
+let currentPage = 1; // Current page number
 
 // Function to normalize strings for case-insensitive comparison
 function normalizeString(str) {
@@ -164,33 +179,32 @@ function displayCharacters() {
 
     // Filter characters
     const filteredCharacters = characters.filter(character => {
-        // Check if name contains the search query
         const nameMatch = !searchQuery || normalizeString(character.name).includes(searchQuery);
-
-        // Check if any rush chain matches the selected checkboxes
         const hasMatchingCheckbox = selectedCheckboxes.length === 0 || selectedCheckboxes.some(cb =>
             character.rushChains.map(normalizeString).includes(cb)
         );
-
-        // Match rush chains to their respective dropdown filters
         const rush1Match = filters.rush1.includes("") || filters.rush1.includes(normalizeString(character.rushChains[0]));
         const rush2Match = filters.rush2.includes("") || filters.rush2.includes(normalizeString(character.rushChains[1]));
         const rush3Match = filters.rush3.includes("") || filters.rush3.includes(normalizeString(character.rushChains[2]));
         const rush4Match = filters.rush4.includes("") || filters.rush4.includes(normalizeString(character.rushChains[3]));
-
-        // Skill filter matches both slots in any order
         const skillFilters = [...filters.skill1, ...filters.skill2].filter(skill => skill !== "");
         const skillsMatch = skillFilters.length === 0 || skillFilters.every(skill =>
             character.skills.map(normalizeString).includes(skill)
         );
-
-        // Combine all filters
         return nameMatch && hasMatchingCheckbox && rush1Match && rush2Match && rush3Match && rush4Match && skillsMatch;
     });
 
-    // Display filtered characters
-    if (filteredCharacters.length > 0) {
-        filteredCharacters.forEach(character => {
+    // Paginate characters
+    const totalItems = filteredCharacters.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    currentPage = Math.min(currentPage, totalPages);
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const charactersToDisplay = filteredCharacters.slice(start, end);
+
+    // Display characters
+    if (charactersToDisplay.length > 0) {
+        charactersToDisplay.forEach(character => {
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td>${character.name}</td>
@@ -208,7 +222,35 @@ function displayCharacters() {
         row.innerHTML = `<td colspan="7" style="text-align: center;">No characters found</td>`;
         characterList.appendChild(row);
     }
+
+    updatePaginationControls(totalPages);
 }
+
+// Function to update pagination controls
+function updatePaginationControls(totalPages) {
+    const paginationControls = document.getElementById("paginationControls");
+    paginationControls.innerHTML = ""; // Clear existing controls
+
+    if (totalPages > 1) {
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement("button");
+            button.textContent = i;
+            button.className = i === currentPage ? "active" : "";
+            button.addEventListener("click", () => {
+                currentPage = i;
+                displayCharacters();
+            });
+            paginationControls.appendChild(button);
+        }
+    }
+}
+
+// Event listener for items per page
+document.getElementById("itemsPerPage").addEventListener("change", e => {
+    itemsPerPage = parseInt(e.target.value);
+    currentPage = 1;
+    displayCharacters();
+});
 
 // Add event listeners to update the display when filters are changed
 document.querySelectorAll("select").forEach(select => {
