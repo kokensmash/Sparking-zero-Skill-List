@@ -113,17 +113,18 @@
         <button class="reset-button" onclick="resetFilters()">Reset Filters</button>
         <table class="character-table">
 <table class="character-table" data-sort-order="asc">
-    <thead>
-        <tr>
-            <th>Character Name <span onclick="sortTable(0)" style="cursor: pointer;">▲▼</span></th>
-            <th>Rush String 1 <span onclick="sortTable(1)" style="cursor: pointer;">▲▼</span></th>
-            <th>Rush String 2 <span onclick="sortTable(2)" style="cursor: pointer;">▲▼</span></th>
-            <th>Rush String 3 <span onclick="sortTable(3)" style="cursor: pointer;">▲▼</span></th>
-            <th>Rush String 4 <span onclick="sortTable(4)" style="cursor: pointer;">▲▼</span></th>
-            <th>Skill 1 <span onclick="sortTable(5)" style="cursor: pointer;">▲▼</span></th>
-            <th>Skill 2 <span onclick="sortTable(6)" style="cursor: pointer;">▲▼</span></th>
-        </tr>
-    </thead>
+<thead>
+    <tr>
+        <th onclick="sortTable(0)" style="cursor:pointer;">Character Name ▲▼</th>
+        <th onclick="sortTable(1)" style="cursor:pointer;">Rush String 1 ▲▼</th>
+        <th onclick="sortTable(2)" style="cursor:pointer;">Rush String 2 ▲▼</th>
+        <th onclick="sortTable(3)" style="cursor:pointer;">Rush String 3 ▲▼</th>
+        <th onclick="sortTable(4)" style="cursor:pointer;">Rush String 4 ▲▼</th>
+        <th onclick="sortTable(5)" style="cursor:pointer;">Skill 1 ▲▼</th>
+        <th onclick="sortTable(6)" style="cursor:pointer;">Skill 2 ▲▼</th>
+    </tr>
+</thead>
+
     <tbody id="characterList"></tbody>
 </table>
 

@@ -150,43 +150,78 @@ function toggleDropdowns() {
     document.querySelectorAll(".or-button").forEach(button => (button.disabled = hasActiveCheckbox));
 }
 
-// Function to display characters based on filters
+// Main function to display characters
 function displayCharacters() {
     const characterList = document.getElementById("characterList");
-    characterList.innerHTML = "";
+    characterList.innerHTML = ""; // Clear the table body
 
-    // Get search query and selected filters
+    // Get search query
     const searchQuery = normalizeString(document.getElementById("searchBar").value);
+
+    // Get selected filters
     const selectedCheckboxes = Array.from(document.querySelectorAll(".rush-filter:checked")).map(cb => normalizeString(cb.value));
 
-    // Filter logic
-    const filteredCharacters = characters.filter(character => {
+    // Get dropdown filter values
+    const filters = {
+        rush1: normalizeString(document.getElementById("rush1").value),
+        rush2: normalizeString(document.getElementById("rush2").value),
+        rush3: normalizeString(document.getElementById("rush3").value),
+        rush4: normalizeString(document.getElementById("rush4").value),
+        skill1: normalizeString(document.getElementById("skill1").value),
+        skill2: normalizeString(document.getElementById("skill2").value),
+    };
+
+    // Step 1: Apply filtering
+    let filteredCharacters = characters.filter(character => {
+        // Name filter
         const nameMatch = !searchQuery || normalizeString(character.name).includes(searchQuery);
-        const hasMatchingCheckbox =
-            selectedCheckboxes.length === 0 ||
+
+        // Checkbox filter (all selected must match)
+        const hasMatchingCheckbox = selectedCheckboxes.length === 0 || 
             selectedCheckboxes.every(cb => character.rushChains.map(normalizeString).includes(cb));
-        return nameMatch && hasMatchingCheckbox; // Simplified for brevity
+
+        // Dropdown filters (match any or match exact)
+        const rushMatch = [0, 1, 2, 3].every(i =>
+            !filters[`rush${i + 1}`] || normalizeString(character.rushChains[i]) === filters[`rush${i + 1}`]
+        );
+
+        const skillMatch = [0, 1].every(i =>
+            !filters[`skill${i + 1}`] || normalizeString(character.skills[i]) === filters[`skill${i + 1}`]
+        );
+
+        return nameMatch && hasMatchingCheckbox && rushMatch && skillMatch;
     });
 
-    // Sort characters if a column is selected
+    // Step 2: Apply sorting (if columnIndex is selected)
     if (sortColumnIndex !== null) {
         filteredCharacters.sort((a, b) => {
-            const valueA = a.rushChains[sortColumnIndex - 1]?.toLowerCase() || a.name.toLowerCase();
-            const valueB = b.rushChains[sortColumnIndex - 1]?.toLowerCase() || b.name.toLowerCase();
+            let valueA, valueB;
+            if (sortColumnIndex === 0) {
+                valueA = a.name.toLowerCase();
+                valueB = b.name.toLowerCase();
+            } else if (sortColumnIndex >= 1 && sortColumnIndex <= 4) {
+                valueA = a.rushChains[sortColumnIndex - 1].toLowerCase();
+                valueB = b.rushChains[sortColumnIndex - 1].toLowerCase();
+            } else {
+                valueA = a.skills[sortColumnIndex - 5].toLowerCase();
+                valueB = b.skills[sortColumnIndex - 5].toLowerCase();
+            }
+
             if (valueA < valueB) return sortAscending ? -1 : 1;
             if (valueA > valueB) return sortAscending ? 1 : -1;
             return 0;
         });
     }
 
-    // Paginate and display logic
+    // Step 3: Apply pagination
     const totalItems = filteredCharacters.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
-    currentPage = Math.min(currentPage, totalPages || 1); // Ensure currentPage is valid
+    currentPage = Math.min(currentPage, totalPages || 1); // Ensure valid page
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const charactersToDisplay = filteredCharacters.slice(start, end);
 
+    // Step 4: Display characters
     if (charactersToDisplay.length > 0) {
         charactersToDisplay.forEach(character => {
             const row = document.createElement("tr");
@@ -237,7 +272,7 @@ function sortTable(columnIndex) {
 // Event listener for items per page
 document.getElementById("itemsPerPage").addEventListener("change", e => {
     itemsPerPage = parseInt(e.target.value);
-    currentPage = 1;
+    currentPage = 1; // Reset to first page
     displayCharacters();
 });
 
