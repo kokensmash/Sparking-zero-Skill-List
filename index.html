@@ -10,7 +10,7 @@
     <header>DBZ Sparking Rush Chain Reference</header>
     <div class="container">
         <div class="search-box">
-            <input type="text" id="searchBar" placeholder="Search by character name or rush chain...">
+            <input type="text" id="searchBar" placeholder="Search by character name">
         </div>
         <div class="filter-options">
             <label><input type="checkbox" class="rush-filter" value="flying kicks"> Flying Kicks</label>
@@ -77,33 +77,35 @@
             <div id="rush4-or-group" class="or-group"></div>
         </div>
         <div class="special-filters">
-            <div>
-                <label for="skill1">Skill 1:</label>
-                <select id="skill1">
-                    <option value="">Any</option>
-                    <option value="explosive wave">Explosive Wave</option>
-                    <option value="full power">Full Power</option>
-                    <option value="afterimage">Afterimage</option>
-                    <option value="wild sense">Wild Sense</option>
-                    <option value="instant spark">Instant Spark</option>
-                </select>
-                <button class="or-button" onclick="addOrOption('skill1')">+ Add OR</button>
-            </div>
-            <div id="skill1-or-group" class="or-group"></div>
+       <div>
+    <label for="skill1">Skill 1:</label>
+    <select id="skill1">
+        <option value="">Any</option>
+        <option value="explosive wave">Explosive Wave</option>
+        <option value="full power">Full Power</option>
+        <option value="afterimage">Afterimage</option>
+        <option value="wild sense">Wild Sense</option>
+        <option value="instant spark">Instant Spark</option>
+        <option value="buff">Buff</option>
+    </select>
+    <button class="or-button" onclick="addOrOption('skill1')">+ Add OR</button>
+</div>
+<div id="skill1-or-group" class="or-group"></div>
 
-            <div>
-                <label for="skill2">Skill 2:</label>
-                <select id="skill2">
-                    <option value="">Any</option>
-                    <option value="explosive wave">Explosive Wave</option>
-                    <option value="full power">Full Power</option>
-                    <option value="afterimage">Afterimage</option>
-                    <option value="wild sense">Wild Sense</option>
-                    <option value="instant spark">Instant Spark</option>
-                </select>
-                <button class="or-button" onclick="addOrOption('skill2')">+ Add OR</button>
-            </div>
-            <div id="skill2-or-group" class="or-group"></div>
+<div>
+    <label for="skill2">Skill 2:</label>
+    <select id="skill2">
+        <option value="">Any</option>
+        <option value="explosive wave">Explosive Wave</option>
+        <option value="full power">Full Power</option>
+        <option value="afterimage">Afterimage</option>
+        <option value="wild sense">Wild Sense</option>
+        <option value="instant spark">Instant Spark</option>
+        <option value="buff">Buff</option>
+    </select>
+    <button class="or-button" onclick="addOrOption('skill2')">+ Add OR</button>
+</div>
+<div id="skill2-or-group" class="or-group"></div>
         </div>
         <button class="reset-button" onclick="resetFilters()">Reset Filters</button>
         <table class="character-table">

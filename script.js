@@ -1,11 +1,106 @@
 // Character data
 const characters = [
+// Gohan's
     { name: "GOHAN (ADULT) [BASE]", rushChains: ["flying kicks", "gut punch", "ki blast cannon", "gut punch"], skills: ["wild sense", "full power"] },
     { name: "GOHAN (ADULT) [SSJ]", rushChains: ["flying kicks", "gut punch", "ki blast cannon", "gut punch"], skills: ["explosive wave", "full power"] },
     { name: "GOHAN (ADULT) [SSJ2]", rushChains: ["flying kicks", "rolling hammer", "ki blast cannon", "gut punch"], skills: ["explosive wave", "instant spark"] },
-    { name: "VEGETA (Z - END) [BASE]", rushChains: ["gut punch", "rush ki wave", "ki blast cannon", "gut punch"], skills: ["afterimage", "buff"] },
-    { name: "VEGETA (Z - END) [SSJ]", rushChains: ["flying kicks", "gut punch", "rush ki wave", "ki blast cannon"], skills: ["explosive wave", "buff"] },
-    { name: "VEGETA (Z - END) [SSJ2]", rushChains: ["flying kicks", "rolling hammer", "rush ki wave", "gut punch"], skills: ["explosive wave", "wild sense"] }
+
+// Vegeta's
+    { 
+        name: "VEGETA (SCOUTER)", 
+        rushChains: ["gut punch", "Flying Kicks", "Rush Ki Wave", "gut punch"],
+        skills: ["Explosive Wave", "Buff"]
+    },
+    { 
+        name: "VEGETA (Z - EARLY) [BASE]", 
+        rushChains: ["Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks", "gut punch"],
+        skills: ["Explosive Wave", "Instant Spark"]
+    },
+    { 
+        name: "VEGETA (Z - EARLY) [SSJ]", 
+        rushChains: ["Ki Blast Cannon", "gut punch", "Flying Kicks", "Rush Ki Wave"],
+        skills: ["Explosive Wave", "Buff"]
+    },
+    { 
+        name: "VEGETA (Z - EARLY) [SV]", 
+        rushChains: ["blaster wave", "Rolling Hammer", "Rush Ki Wave", "gut punch"],
+        skills: ["Explosive Wave", "Instant Spark"]
+    },
+    { 
+        name: "VEGETA (Z - END) [BASE]", 
+        rushChains: ["gut punch", "rush ki wave", "ki blast cannon", "gut punch"], 
+        skills: ["afterimage", "buff"] 
+    },
+    { 
+        name: "VEGETA (Z - END) [SSJ]", 
+        rushChains: ["flying kicks", "gut punch", "rush ki wave", "ki blast cannon"], 
+        skills: ["explosive wave", "buff"] 
+    },
+    { 
+        name: "VEGETA (Z - END) [SSJ2]", 
+        rushChains: ["flying kicks", "rolling hammer", "rush ki wave", "gut punch"], 
+        skills: ["explosive wave", "wild sense"] 
+    },
+    { 
+        name: "VEGETA (Z - END) [MAJIN]", 
+        rushChains: ["gut punch", "gut punch", "Ki Blast Cannon", "Rush Ki Wave"],
+        skills: ["Buff", "Instant Spark"]
+    },
+    { 
+        name: "VEGETA (GT) [SSJ4]", 
+        rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "gut punch"],
+        skills: ["Explosive Wave", "buff"]
+    },
+    { 
+        name: "VEGETA (SUPER) [BASE]", 
+        rushChains: ["Ki Blast Cannon", "gut punch", "Flying Kicks", "Rush Ki Wave"],
+        skills: ["Explosive Wave", "instant spark"]
+    },
+    { 
+        name: "VEGETA (SUPER) [SSJ]", 
+        rushChains: ["gut punch", "Rush Ki Wave", "Ki Blast Cannon", "gut punch"],
+        skills: ["buff", "Instant Spark"]
+    },
+    { 
+        name: "VEGETA (SUPER) [SSJ GOD]", 
+        rushChains: ["Flying Kicks", "gut punch", "Rush Ki Wave", "Ki Blast Cannon"],
+        skills: ["Explosive Wave", "Instant Spark"]
+    },
+    { 
+        name: "VEGETA (SUPER) [SSJ GOD SS]", 
+        rushChains: ["Flying Kicks", "gut punch", "Rush Ki Wave", "gut punch"],
+        skills: ["buff", "buff"]
+    },
+    { 
+        name: "CABBA [BASE]", 
+        rushChains: ["Flying Kicks", "Flying Kicks", "gut punch", "Ki Blast Cannon"],
+        skills: ["Explosive Wave", "Full Power"]
+    },
+    { 
+        name: "CABBA [SSJ]", 
+        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "gut punch"],
+        skills: ["Explosive Wave", "Wild Sense"]
+    },
+    { 
+        name: "CABBA [SSJ2]", 
+        rushChains: ["gut punch", "Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks"],
+        skills: ["Explosive Wave", "Instant Spark"]
+    },
+    { 
+        name: "BABY VEGETA (GT)", 
+        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "gut punch"],
+        skills: ["Explosive Wave", "buff"]
+    },
+    { 
+        name: "SUPER BABY 1 (GT)", 
+        rushChains: ["Flying Kicks", "Rush Ki Wave", "Ki Blast Cannon", "gut punch"],
+        skills: ["Afterimage", "buff"]
+    },
+    { 
+        name: "SUPER BABY 2 (GT)", 
+        rushChains: ["Flying Kicks", "gut punch", "Rolling Hammer", "Rush Ki Wave"],
+        skills: ["Explosive Wave", "Full Power"]
+    }
 ];
 
 // Function to normalize strings for case-insensitive comparison
