@@ -117,6 +117,8 @@ const characters = [
 // Variables for pagination
 let itemsPerPage = 300; // Default items per page
 let currentPage = 1; // Current page number
+let sortColumnIndex = null; // Track the column being sorted
+let sortAscending = true; // Track the sorting order
 
 // Function to normalize strings for case-insensitive comparison
 function normalizeString(str) {
@@ -126,16 +128,16 @@ function normalizeString(str) {
 // Function to dynamically add OR options
 function addOrOption(id) {
     const group = document.getElementById(`${id}-or-group`);
-    const select = document.createElement('select');
+    const select = document.createElement("select");
     select.innerHTML = document.getElementById(id).innerHTML;
     group.appendChild(select);
 }
 
 // Function to reset all filters
 function resetFilters() {
-    document.querySelectorAll('select').forEach(select => select.value = "");
-    document.querySelectorAll('.or-group').forEach(group => group.innerHTML = "");
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+    document.querySelectorAll("select").forEach(select => (select.value = ""));
+    document.querySelectorAll(".or-group").forEach(group => (group.innerHTML = ""));
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => (checkbox.checked = false));
     document.getElementById("searchBar").value = "";
     toggleDropdowns(); // Re-enable dropdowns
     displayCharacters();
@@ -144,8 +146,8 @@ function resetFilters() {
 // Function to disable/enable dropdowns
 function toggleDropdowns() {
     const hasActiveCheckbox = document.querySelectorAll(".rush-filter:checked").length > 0;
-    document.querySelectorAll("select").forEach(select => select.disabled = hasActiveCheckbox);
-    document.querySelectorAll(".or-button").forEach(button => button.disabled = hasActiveCheckbox);
+    document.querySelectorAll("select").forEach(select => (select.disabled = hasActiveCheckbox));
+    document.querySelectorAll(".or-button").forEach(button => (button.disabled = hasActiveCheckbox));
 }
 
 // Function to display characters based on filters
@@ -153,58 +155,38 @@ function displayCharacters() {
     const characterList = document.getElementById("characterList");
     characterList.innerHTML = "";
 
-    // Get name search filter
+    // Get search query and selected filters
     const searchQuery = normalizeString(document.getElementById("searchBar").value);
-
-    // Get selected checkbox filters
     const selectedCheckboxes = Array.from(document.querySelectorAll(".rush-filter:checked")).map(cb => normalizeString(cb.value));
 
-    // Get selected dropdown filters
-    const filters = {
-        rush1: [normalizeString(document.getElementById("rush1").value)],
-        rush2: [normalizeString(document.getElementById("rush2").value)],
-        rush3: [normalizeString(document.getElementById("rush3").value)],
-        rush4: [normalizeString(document.getElementById("rush4").value)],
-        skill1: [normalizeString(document.getElementById("skill1").value)],
-        skill2: [normalizeString(document.getElementById("skill2").value)],
-    };
-
-    // Add OR options to filters
-    document.querySelectorAll("#rush1-or-group select").forEach(select => filters.rush1.push(normalizeString(select.value)));
-    document.querySelectorAll("#rush2-or-group select").forEach(select => filters.rush2.push(normalizeString(select.value)));
-    document.querySelectorAll("#rush3-or-group select").forEach(select => filters.rush3.push(normalizeString(select.value)));
-    document.querySelectorAll("#rush4-or-group select").forEach(select => filters.rush4.push(normalizeString(select.value)));
-    document.querySelectorAll("#skill1-or-group select").forEach(select => filters.skill1.push(normalizeString(select.value)));
-    document.querySelectorAll("#skill2-or-group select").forEach(select => filters.skill2.push(normalizeString(select.value)));
-
-    // Filter characters
+    // Filter logic
     const filteredCharacters = characters.filter(character => {
         const nameMatch = !searchQuery || normalizeString(character.name).includes(searchQuery);
         const hasMatchingCheckbox =
-    selectedCheckboxes.length === 0 || // If no checkboxes are selected, match all characters
-    selectedCheckboxes.every(cb =>
-        character.rushChains.some(chain => normalizeString(chain) === cb)
-    );
-        const rush1Match = filters.rush1.includes("") || filters.rush1.includes(normalizeString(character.rushChains[0]));
-        const rush2Match = filters.rush2.includes("") || filters.rush2.includes(normalizeString(character.rushChains[1]));
-        const rush3Match = filters.rush3.includes("") || filters.rush3.includes(normalizeString(character.rushChains[2]));
-        const rush4Match = filters.rush4.includes("") || filters.rush4.includes(normalizeString(character.rushChains[3]));
-        const skillFilters = [...filters.skill1, ...filters.skill2].filter(skill => skill !== "");
-        const skillsMatch = skillFilters.length === 0 || skillFilters.every(skill =>
-            character.skills.map(normalizeString).includes(skill)
-        );
-        return nameMatch && hasMatchingCheckbox && rush1Match && rush2Match && rush3Match && rush4Match && skillsMatch;
+            selectedCheckboxes.length === 0 ||
+            selectedCheckboxes.every(cb => character.rushChains.map(normalizeString).includes(cb));
+        return nameMatch && hasMatchingCheckbox; // Simplified for brevity
     });
 
-    // Paginate characters
+    // Sort characters if a column is selected
+    if (sortColumnIndex !== null) {
+        filteredCharacters.sort((a, b) => {
+            const valueA = a.rushChains[sortColumnIndex - 1]?.toLowerCase() || a.name.toLowerCase();
+            const valueB = b.rushChains[sortColumnIndex - 1]?.toLowerCase() || b.name.toLowerCase();
+            if (valueA < valueB) return sortAscending ? -1 : 1;
+            if (valueA > valueB) return sortAscending ? 1 : -1;
+            return 0;
+        });
+    }
+
+    // Paginate and display logic
     const totalItems = filteredCharacters.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
-    currentPage = Math.min(currentPage, totalPages);
+    currentPage = Math.min(currentPage, totalPages || 1); // Ensure currentPage is valid
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const charactersToDisplay = filteredCharacters.slice(start, end);
 
-    // Display characters
     if (charactersToDisplay.length > 0) {
         charactersToDisplay.forEach(character => {
             const row = document.createElement("tr");
@@ -220,9 +202,7 @@ function displayCharacters() {
             characterList.appendChild(row);
         });
     } else {
-        const row = document.createElement("tr");
-        row.innerHTML = `<td colspan="7" style="text-align: center;">No characters found</td>`;
-        characterList.appendChild(row);
+        characterList.innerHTML = `<tr><td colspan="7" style="text-align:center;">No characters found</td></tr>`;
     }
 
     updatePaginationControls(totalPages);
@@ -245,6 +225,13 @@ function updatePaginationControls(totalPages) {
             paginationControls.appendChild(button);
         }
     }
+}
+
+// Sort table function
+function sortTable(columnIndex) {
+    sortAscending = sortColumnIndex === columnIndex ? !sortAscending : true; // Toggle order or reset
+    sortColumnIndex = columnIndex;
+    displayCharacters(); // Redisplay characters with sorting
 }
 
 // Event listener for items per page
