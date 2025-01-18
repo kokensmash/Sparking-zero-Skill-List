@@ -180,9 +180,11 @@ function displayCharacters() {
     // Filter characters
     const filteredCharacters = characters.filter(character => {
         const nameMatch = !searchQuery || normalizeString(character.name).includes(searchQuery);
-        const hasMatchingCheckbox = selectedCheckboxes.length === 0 || selectedCheckboxes.some(cb =>
-            character.rushChains.map(normalizeString).includes(cb)
-        );
+        const hasMatchingCheckbox =
+    selectedCheckboxes.length === 0 || // If no checkboxes are selected, match all characters
+    selectedCheckboxes.every(cb =>
+        character.rushChains.some(chain => normalizeString(chain) === cb)
+    );
         const rush1Match = filters.rush1.includes("") || filters.rush1.includes(normalizeString(character.rushChains[0]));
         const rush2Match = filters.rush2.includes("") || filters.rush2.includes(normalizeString(character.rushChains[1]));
         const rush3Match = filters.rush3.includes("") || filters.rush3.includes(normalizeString(character.rushChains[2]));
