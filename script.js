@@ -109,7 +109,7 @@ const characters = [
     { 
         name: "SUPER BABY 2 (GT)", 
         rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"], 
-        skills: ["Explosive Wave", "Full Power"] 
+        skills: ["Explosive Wave", "Instant Spark"] 
     }
 ]; 
 
@@ -153,75 +153,69 @@ function toggleDropdowns() {
 // Main function to display characters
 function displayCharacters() {
     const characterList = document.getElementById("characterList");
-    characterList.innerHTML = ""; // Clear the table body
+    characterList.innerHTML = "";
 
-    // Get search query
+    // Get search query and selected filters
     const searchQuery = normalizeString(document.getElementById("searchBar").value);
-
-    // Get selected filters
     const selectedCheckboxes = Array.from(document.querySelectorAll(".rush-filter:checked")).map(cb => normalizeString(cb.value));
 
-    // Get dropdown filter values
     const filters = {
-        rush1: normalizeString(document.getElementById("rush1").value),
-        rush2: normalizeString(document.getElementById("rush2").value),
-        rush3: normalizeString(document.getElementById("rush3").value),
-        rush4: normalizeString(document.getElementById("rush4").value),
-        skill1: normalizeString(document.getElementById("skill1").value),
-        skill2: normalizeString(document.getElementById("skill2").value),
+        rush1: [normalizeString(document.getElementById("rush1").value)],
+        rush2: [normalizeString(document.getElementById("rush2").value)],
+        rush3: [normalizeString(document.getElementById("rush3").value)],
+        rush4: [normalizeString(document.getElementById("rush4").value)],
+        skill1: [normalizeString(document.getElementById("skill1").value)],
+        skill2: [normalizeString(document.getElementById("skill2").value)],
     };
 
-    // Step 1: Apply filtering
-    let filteredCharacters = characters.filter(character => {
-        // Name filter
+    // Add OR options to filters
+    document.querySelectorAll("#rush1-or-group select").forEach(select => filters.rush1.push(normalizeString(select.value)));
+    document.querySelectorAll("#rush2-or-group select").forEach(select => filters.rush2.push(normalizeString(select.value)));
+    document.querySelectorAll("#rush3-or-group select").forEach(select => filters.rush3.push(normalizeString(select.value)));
+    document.querySelectorAll("#rush4-or-group select").forEach(select => filters.rush4.push(normalizeString(select.value)));
+    document.querySelectorAll("#skill1-or-group select").forEach(select => filters.skill1.push(normalizeString(select.value)));
+    document.querySelectorAll("#skill2-or-group select").forEach(select => filters.skill2.push(normalizeString(select.value)));
+
+    // Filter characters
+    const filteredCharacters = characters.filter(character => {
         const nameMatch = !searchQuery || normalizeString(character.name).includes(searchQuery);
 
-        // Checkbox filter (all selected must match)
-        const hasMatchingCheckbox = selectedCheckboxes.length === 0 || 
+        const hasMatchingCheckbox =
+            selectedCheckboxes.length === 0 ||
             selectedCheckboxes.every(cb => character.rushChains.map(normalizeString).includes(cb));
 
-        // Dropdown filters (match any or match exact)
-        const rushMatch = [0, 1, 2, 3].every(i =>
-            !filters[`rush${i + 1}`] || normalizeString(character.rushChains[i]) === filters[`rush${i + 1}`]
-        );
+        const rush1Match = filters.rush1.includes("") || filters.rush1.includes(normalizeString(character.rushChains[0]));
+        const rush2Match = filters.rush2.includes("") || filters.rush2.includes(normalizeString(character.rushChains[1]));
+        const rush3Match = filters.rush3.includes("") || filters.rush3.includes(normalizeString(character.rushChains[2]));
+        const rush4Match = filters.rush4.includes("") || filters.rush4.includes(normalizeString(character.rushChains[3]));
 
-        const skillMatch = [0, 1].every(i =>
-            !filters[`skill${i + 1}`] || normalizeString(character.skills[i]) === filters[`skill${i + 1}`]
-        );
+        const skillFilters = [...filters.skill1, ...filters.skill2].filter(skill => skill !== "");
+        const skillsMatch =
+            skillFilters.length === 0 ||
+            skillFilters.every(skill => character.skills.map(normalizeString).includes(skill));
 
-        return nameMatch && hasMatchingCheckbox && rushMatch && skillMatch;
+        return nameMatch && hasMatchingCheckbox && rush1Match && rush2Match && rush3Match && rush4Match && skillsMatch;
     });
 
-    // Step 2: Apply sorting (if columnIndex is selected)
+    // Sorting logic if any column is selected
     if (sortColumnIndex !== null) {
         filteredCharacters.sort((a, b) => {
-            let valueA, valueB;
-            if (sortColumnIndex === 0) {
-                valueA = a.name.toLowerCase();
-                valueB = b.name.toLowerCase();
-            } else if (sortColumnIndex >= 1 && sortColumnIndex <= 4) {
-                valueA = a.rushChains[sortColumnIndex - 1].toLowerCase();
-                valueB = b.rushChains[sortColumnIndex - 1].toLowerCase();
-            } else {
-                valueA = a.skills[sortColumnIndex - 5].toLowerCase();
-                valueB = b.skills[sortColumnIndex - 5].toLowerCase();
-            }
-
+            const valueA = a.rushChains[sortColumnIndex - 1]?.toLowerCase() || a.name.toLowerCase();
+            const valueB = b.rushChains[sortColumnIndex - 1]?.toLowerCase() || b.name.toLowerCase();
             if (valueA < valueB) return sortAscending ? -1 : 1;
             if (valueA > valueB) return sortAscending ? 1 : -1;
             return 0;
         });
     }
 
-    // Step 3: Apply pagination
+    // Paginate and display characters
     const totalItems = filteredCharacters.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
-    currentPage = Math.min(currentPage, totalPages || 1); // Ensure valid page
+    currentPage = Math.min(currentPage, totalPages || 1);
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const charactersToDisplay = filteredCharacters.slice(start, end);
 
-    // Step 4: Display characters
     if (charactersToDisplay.length > 0) {
         charactersToDisplay.forEach(character => {
             const row = document.createElement("tr");
