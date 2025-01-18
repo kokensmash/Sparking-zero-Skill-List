@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBZ Sparking Rush Chain Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>DBZ Sparking Rush Chain Reference</header>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="searchBar" placeholder="Search by character name or rush chain...">
+        </div>
+        <div class="filter-options">
+            <label><input type="checkbox" class="rush-filter" value="flying kicks"> Flying Kicks</label>
+            <label><input type="checkbox" class="rush-filter" value="gut punch"> Gut Punch</label>
+            <label><input type="checkbox" class="rush-filter" value="ki blast cannon"> Ki Blast Cannon</label>
+            <label><input type="checkbox" class="rush-filter" value="rolling hammer"> Rolling Hammer</label>
+            <label><input type="checkbox" class="rush-filter" value="rush ki wave"> Rush Ki Wave</label>
+        </div>
+        <div class="order-filters">
+            <div>
+                <label for="rush1">Rush String 1:</label>
+                <select id="rush1">
+                    <option value="">Any</option>
+                    <option value="flying kicks">Flying Kicks</option>
+                    <option value="gut punch">Gut Punch</option>
+                    <option value="ki blast cannon">Ki Blast Cannon</option>
+                    <option value="rolling hammer">Rolling Hammer</option>
+                    <option value="rush ki wave">Rush Ki Wave</option>
+                </select>
+                <button class="or-button" onclick="addOrOption('rush1')">+ Add OR</button>
+            </div>
+            <div id="rush1-or-group" class="or-group"></div>
+
+            <div>
+                <label for="rush2">Rush String 2:</label>
+                <select id="rush2">
+                    <option value="">Any</option>
+                    <option value="flying kicks">Flying Kicks</option>
+                    <option value="gut punch">Gut Punch</option>
+                    <option value="ki blast cannon">Ki Blast Cannon</option>
+                    <option value="rolling hammer">Rolling Hammer</option>
+                    <option value="rush ki wave">Rush Ki Wave</option>
+                </select>
+                <button class="or-button" onclick="addOrOption('rush2')">+ Add OR</button>
+            </div>
+            <div id="rush2-or-group" class="or-group"></div>
+
+            <div>
+                <label for="rush3">Rush String 3:</label>
+                <select id="rush3">
+                    <option value="">Any</option>
+                    <option value="flying kicks">Flying Kicks</option>
+                    <option value="gut punch">Gut Punch</option>
+                    <option value="ki blast cannon">Ki Blast Cannon</option>
+                    <option value="rolling hammer">Rolling Hammer</option>
+                    <option value="rush ki wave">Rush Ki Wave</option>
+                </select>
+                <button class="or-button" onclick="addOrOption('rush3')">+ Add OR</button>
+            </div>
+            <div id="rush3-or-group" class="or-group"></div>
+
+            <div>
+                <label for="rush4">Rush String 4:</label>
+                <select id="rush4">
+                    <option value="">Any</option>
+                    <option value="flying kicks">Flying Kicks</option>
+                    <option value="gut punch">Gut Punch</option>
+                    <option value="ki blast cannon">Ki Blast Cannon</option>
+                    <option value="rolling hammer">Rolling Hammer</option>
+                    <option value="rush ki wave">Rush Ki Wave</option>
+                </select>
+                <button class="or-button" onclick="addOrOption('rush4')">+ Add OR</button>
+            </div>
+            <div id="rush4-or-group" class="or-group"></div>
+        </div>
+        <div class="special-filters">
+            <div>
+                <label for="skill1">Skill 1:</label>
+                <select id="skill1">
+                    <option value="">Any</option>
+                    <option value="explosive wave">Explosive Wave</option>
+                    <option value="full power">Full Power</option>
+                    <option value="afterimage">Afterimage</option>
+                    <option value="wild sense">Wild Sense</option>
+                    <option value="instant spark">Instant Spark</option>
+                </select>
+                <button class="or-button" onclick="addOrOption('skill1')">+ Add OR</button>
+            </div>
+            <div id="skill1-or-group" class="or-group"></div>
+
+            <div>
+                <label for="skill2">Skill 2:</label>
+                <select id="skill2">
+                    <option value="">Any</option>
+                    <option value="explosive wave">Explosive Wave</option>
+                    <option value="full power">Full Power</option>
+                    <option value="afterimage">Afterimage</option>
+                    <option value="wild sense">Wild Sense</option>
+                    <option value="instant spark">Instant Spark</option>
+                </select>
+                <button class="or-button" onclick="addOrOption('skill2')">+ Add OR</button>
+            </div>
+            <div id="skill2-or-group" class="or-group"></div>
+        </div>
+        <button class="reset-button" onclick="resetFilters()">Reset Filters</button>
+        <table class="character-table">
+            <thead>
+                <tr>
+                    <th>Character Name</th>
+                    <th>Rush String 1</th>
+                    <th>Rush String 2</th>
+                    <th>Rush String 3</th>
+                    <th>Rush String 4</th>
+                    <th>Skill 1</th>
+                    <th>Skill 2</th>
+                </tr>
+            </thead>
+            <tbody id="characterList"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
