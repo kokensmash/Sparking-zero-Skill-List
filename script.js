@@ -1,5 +1,9 @@
 // Character data
 const characters = [
+  
+ //Gohan's
+
+
     { 
         name: "GOHAN (ADULT) [BASE]", 
         rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Gut Punch"], 
@@ -15,6 +19,49 @@ const characters = [
         rushChains: ["Flying Kicks", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"], 
         skills: ["Explosive Wave", "Instant Spark"] 
     },
+{ 
+    name: "GOHAN (KID)",  
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],  
+    skills: ["Instant Spark", "Afterimage Strike"]  
+}, 
+{ 
+    name: "GOHAN (TEEN) [BASE]",  
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],  
+    skills: ["Wild Sense", "Full Power"]  
+}, 
+{ 
+    name: "GOHAN (TEEN) [SSJ]",  
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],  
+    skills: ["Explosive Wave", "Instant Spark"]  
+}, 
+{ 
+    name: "GOHAN (TEEN) [SSJ2]",  
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Gut Punch", "Heavy Crush"],  
+    skills: ["Wild Sense", "Instant Spark"]  
+}, 
+{ 
+    name: "GOHAN (ADULT) [ULTIMATE]",  
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rolling Hammer", "Gut Punch"],  
+    skills: ["Wild Sense", "Full Power"]  
+}, 
+{ 
+    name: "GOHAN (FUTURE) [BASE]",  
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Flying Kicks"],  
+    skills: ["Barrier", "Instant Spark"]  
+}, 
+{ 
+    name: "GOHAN (FUTURE) [SSJ]",  
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"],  
+    skills: ["Barrier", "Instant Spark"]  
+}, 
+{ 
+    name: "GREAT SAIYAMAN",  
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],  
+    skills: ["Buff", "Buff"]  
+},
+
+
+
     // Vegeta's
     { 
         name: "VEGETA (SCOUTER)", 

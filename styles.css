@@ -61,10 +61,13 @@ header {
     display: flex;
     gap: 10px;
 }
-
+.character-table {
+    margin-bottom: 30px; /* Add margin below the table */
+}
 .pagination-options {
-    margin: 20px 0;
-    text-align: center;	
+    margin: 50px 0; /* Adjust as needed */
+    padding-top: 20px; /* Adds padding specifically at the top */
+    text-align: center;
 }
 
 .pagination-controls button {
@@ -80,4 +83,34 @@ header {
 .pagination-controls button.active {
     background-color: #e67300;
     font-weight: bold;
+}
+<div class="filter-group">
+    <label for="skill1">Skill 1:</label>
+    <select id="skill1">
+        <option value="">Any</option>
+        <option value="explosive wave">Explosive Wave</option>
+        <option value="full power">Full Power</option>
+        <option value="afterimage">Afterimage</option>
+        <option value="wild sense">Wild Sense</option>
+        <option value="instant spark">Instant Spark</option>
+        <option value="buff">Buff</option>
+        <option value="afterimage strike">Afterimage Strike</option>
+    </select>
+</div>
+
+<div class="filter-group">
+    <label for="skill2">Skill 2:</label>
+    <select id="skill2">
+        <option value="">Any</option>
+        <option value="explosive wave">Explosive Wave</option>
+        <option value="full power">Full Power</option>
+        <option value="afterimage">Afterimage</option>
+        <option value="wild sense">Wild Sense</option>
+        <option value="instant spark">Instant Spark</option>
+        <option value="buff">Buff</option>
+        <option value="afterimage strike">Afterimage Strike</option>
+    </select>
+</div>
+.filter-group {
+    margin-bottom: 30px; /* Adds spacing between each group */
 }
