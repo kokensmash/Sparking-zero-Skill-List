@@ -68,34 +68,40 @@ const characters = [
     },
     {
         name: "GOKU (Z - EARLY)",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Gut Punch", "Gut Punch"],
+        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
         skills: ["Solar Flare", "Buff"]
     },
     {
         name: "GOKU (Z - MID) [BASE]",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Flying Kicks"],
+        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
         skills: ["Buff", "Buff"]
     },
     {
         name: "GOKU (Z - MID) [SSJ]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Flying Kicks", "Rolling Hammer"],
-        skills: ["Wild Sense", "Instant Transmission"]
+        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
+        skills: ["Wild Sense", "Instant Spark"]
     },
     {
         name: "GOKU (Z - END) [BASE]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Flying Kicks", "Flying Kicks"],
-        skills: ["Wild Sense", "Instant Transmission"]
+        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+        skills: ["Instant Transmission", "Wild Sense"]
     },
     {
         name: "GOKU (Z - END) [SSJ]",
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Flying Kicks", "Flying Kicks"],
+        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
         skills: ["Wild Sense", "Buff"]
     },
     {
         name: "GOKU (Z - END) [SSJ2]",
-        rushChains: ["Ki Blast Cannon", "Ki Blast Cannon", "Gut Punch", "Ki Blast Cannon"],
-        skills: ["Wild Sense", "Buff"]
+        rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Gut Punch"],
+        skills: ["Instant Transmission", "Instant Spark"]
     },
+    {
+        name: "GOKU (Z - END) [SSJ3]",
+        rushChains: ["Ki Blast Cannon", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
+        skills: ["Instant Transmission", "Instant Spark"]
+    },
+
     {
         name: "GOKU (GT) [BASE]",
         rushChains: ["Flying Kicks", "Blaster Wave", "Gut Punch", "Flying Kicks"],
@@ -104,57 +110,62 @@ const characters = [
     {
         name: "GOKU (GT) [SSJ]",
         rushChains: ["Flying Kicks", "Blaster Wave", "Gut Punch", "Flying Kicks"],
-        skills: ["Buff", "Instant Spark"]
+        skills: ["Wild Sense", "Instant Spark"]
     },
     {
         name: "GOKU (GT) [SSJ3]",
         rushChains: ["Rolling Hammer", "Blaster Wave", "Gut Punch", "Flying Kicks"],
-        skills: ["Buff", "Instant Spark"]
+        skills: ["Buff", "Buff"]
     },
     {
         name: "GOKU (GT) [SSJ4]",
-        rushChains: ["Flying Kicks", "Rolling Hammer", "Ki Blast Cannon", "Flying Kicks"],
-        skills: ["Buff", "Instant Spark"]
+        rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],
+        skills: ["Instant Transmission", "Buff"]
     },
     {
         name: "GOKU (SUPER) [BASE]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
-        skills: ["Wild Sense", "Instant Transmission"]
+        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+        skills: ["Instant Transmission", "Instant Spark"]
     },
     {
         name: "GOKU (SUPER) [SSJ]",
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rolling Hammer", "Flying Kicks"],
-        skills: ["Paralysis", "Buff"]
+        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
+        skills: ["Wild Sense", "Buff"]
     },
     {
         name: "GOKU (SUPER) [SSJ GOD]",
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Flying Kicks", "Flying Kicks"],
-        skills: ["Wild Sense", "Instant Spark"]
+        rushChains: ["Ki Blast Cannon", "Flying Kicks", "Rolling Hammer", "Gut Punch"],
+        skills: ["Paralysis", "Buff"]
     },
     {
-        name: "GOKU (SUPER) [SSJ GOD SS]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Flying Kicks", "Flying Kicks"],
-        skills: ["Buff", "Instant Spark"]
+        name: "GOKU (SUPER) [SSJ GOD SS BLUE]",
+        rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],
+        skills: ["Instant Transmission", "Buff"]
     },
     {
         name: "GOKU (SUPER) UI -SIGN-",
-        rushChains: ["Gut Punch", "Flying Kicks", "Gut Punch", "Flying Kicks"],
+        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kick", "Gut Punch"],
         skills: ["Buff", "Instant Spark"]
     },
     {
         name: "GOKU (SUPER MASTERED UI)",
-        rushChains: ["Flying Kicks", "Flying Kicks", "Rolling Hammer", "Ki Blast Cannon"],
-        skills: ["Buff", "Instant Spark"]
+        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
+        skills: ["Wild Sense", "Instant Spark"]
+    },
+    {
+        name: "GOKU (MINI)",
+        rushChains: ["Flying Kicks", "Gut Punch", "Gut Punch", "Flying Kicks"],
+        skills: ["Regeneration", "Buff"]
     },
     {
         name: "GOKU BLACK [BASE]",
-        rushChains: ["Gut Punch", "Flying Kicks", "Gut Punch", "Flying Kicks"],
-        skills: ["Wild Sense", "Instant Transmission"]
+        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+        skills: ["Wild Sense", "Buff"]
     },
     {
         name: "GOKU BLACK [SSJ ROSÉ]",
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
-        skills: ["Buff", "Instant Spark"]
+        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"],
+        skills: ["Instant Transmission", "Instant Spark"]
     },
     {
         name: "BARDOCK",
@@ -169,11 +180,11 @@ const characters = [
     {
         name: "GOTEN (BASE)",
         rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
-        skills: ["Afterimage Strike", "Regeneration"]
+        skills: ["Afterimage", "Regeneration"]
     },
     {
         name: "GOTEN (SSJ)",
-        rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Flying Kicks"],
+        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
         skills: ["Wild Sense", "Buff"]
     },
 
@@ -236,17 +247,17 @@ const characters = [
     { 
         name: "VEGETA (SUPER) [SSJ GOD]", 
         rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Ki Blast Cannon"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
+        skills: ["Explosive Wave", "Buff"] 
     },
     { 
-        name: "VEGETA (SUPER) [SSJ GOD SS]", 
+        name: "VEGETA (SUPER) [SSJ GOD SS BLUE]", 
         rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Gut Punch"], 
         skills: ["Buff", "Buff"] 
     },
     { 
         name: "CABBA [BASE]", 
         rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Ki Blast Cannon"], 
-        skills: ["Explosive Wave", "Full Power"] 
+        skills: ["Explosive Wave", "Instant Spark"] 
     },
     { 
         name: "CABBA [SSJ]", 
