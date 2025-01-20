@@ -400,7 +400,7 @@ const characters = [
 {
     name: "HIRUDEGARN",
     rushChains: ["Rolling Hammer", "Blaster Wave", "Gut Punch", ""],
-    skills: ["Explosive Wave", "Dodge"]
+    skills: ["Explosive Wave", "Afterimage"]
 },
 {
     name: "TAPION",
@@ -449,13 +449,489 @@ const characters = [
     name: "BROLY (SUPER) [LSSJ]",
     rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Rolling Hammer"],
     skills: ["Instant Transmission", "Instant Spark"]
+},
+
+//trunks+Gotenks
+
+{
+    name: "TRUNKS (KID) [BASE]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Afterimage", "Buff"]
+},
+{
+    name: "TRUNKS (KID) [SSJ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "TRUNKS (MELEE) [BASE]",
+    rushChains: ["Gut Punch", "Blaster Wave", "Gut Punch", "Flying Kicks"],
+    skills: ["Explosive Wave", "Wild Sense"]
+},
+{
+    name: "TRUNKS (MELEE) [SSJ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Blaster Wave", "Gut Punch"],
+    skills: ["Solar Flare", "Wild Sense"]
+},
+{
+    name: "TRUNKS (MELEE) [Super Trunks]",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "TRUNKS (SWORD) [BASE]",
+    rushChains: ["Flying Kicks", "Ki Blast Canon", "Gut Punch", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "TRUNKS (SWORD) [SSJ]",
+    rushChains: ["Flying Kicks", "Ki Blast Canon", "Gut Punch", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "TRUNKS (FUTURE) [BASE]",
+    rushChains: ["Flying Kicks", "Ki Blast Canon", "Rush Ki Wave", "Gut Punch"],
+    skills: ["Afterimage", "Instant Spark"]
+},
+{
+    name: "TRUNKS (FUTURE) [SSJ]",
+    rushChains: ["Flying Kicks", "Ki Blast Canon", "Rush Ki Wave", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "GOTENKS [BASE]",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Afterimage", "Buff"]
+},
+{
+    name: "GOTENKS [SSJ]",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Flying Kicks"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "GOTENKS [SSJ3]",
+    rushChains: ["Ki Blast Canon", "Gut Punch", "Rush Ki Wave", "Flying Kicks"],
+    skills: ["Paralysis", "Buff"]
+},
+
+   //z fighters and friends
+
+{
+    name: "KRILLIN",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Solar Flare", "Afterimage Strike"]
+},
+{
+    name: "YAMCHA",
+    rushChains: ["Gut Punch", "Ki Blast Canon", "Flying Kicks", "Rolling Hammer"],
+    skills: ["Afterimage", "Instant Spark"]
+},
+{
+    name: "TIEN",
+    rushChains: ["Ki Blast Canon", "Flying Kicks", "Gut Punch", "Gut Punch"],
+    skills: ["Solar Flare", "Wild Sense"]
+},
+{
+    name: "CHIAOTZU",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Flying Kicks", "Gut Punch"],
+    skills: ["Paralysis", "Afterimage"]
+},
+{
+    name: "YAJIROBE",
+    rushChains: ["Gut Punch", "Gut Punch", "Gut Punch", "Rolling Hammer"],
+    skills: ["Instant Spark", "Regeneration"]
+},
+{
+    name: "MASTER ROSHI [BASE]",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Afterimage Strike", "Buff"]
+},
+{
+    name: "MASTER ROSHI [MAX POWER]",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Gut Punch", "Rolling Hammer"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "PICCOLO (EARLY)",
+    rushChains: ["Ki Blast Canon", "Rush Ki Wave", "Gut Punch", "Flying Kicks"],
+    skills: ["Paralysis", "Instant Spark"]
+},
+{
+    name: "PICCOLO (FUSED WITH KAMI)",
+    rushChains: ["Ki Blast Canon", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "NAIL",
+    rushChains: ["Ki Blast Canon", "Flying Kicks", "Gut Punch", "Rush Ki Wave"],
+    skills: ["Buff", "Instant Spark"]
+},
+{
+    name: "BEERUS",
+    rushChains: ["Ki Blast Cannon", "Rolling Hammer", "Gut Punch", "Flying Kicks"],
+    skills: ["Regeneration", "Instant Spark"]
+},
+{
+    name: "WHIS",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
+    skills: ["Explosive Wave", "Regeneration"]
+},
+{
+    name: "VIDEL",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
+    skills: ["Afterimage Strike", "Instant Spark"]
+},
+
+      //Other Universes
+{
+    name: "RIBRIANNE",
+    rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Rolling Hammer"],
+    skills: ["Paralysis", "Instant Spark"]
+},
+{
+    name: "KAKUNSA",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rolling Hammer", "Gut Punch"],
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "ROASIE",
+    rushChains: ["Ki Blast Cannon", "Flying Kicks", "Gut Punch", "Ki Blast Cannon"],
+    skills: ["Full Power", "Instant Spark"]
+},
+{
+    name: "HIT",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rolling Hammer", "Gut Punch"],
+    skills: ["Afterimage", "Instant Transmission"]
+},
+{
+    name: "FROST",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Rolling Hammer"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "BERGAMO",
+    rushChains: ["Flying Kicks", "Rush Ki Wave", "Gut Punch", "Rolling Hammer"],
+    skills: ["Instant Spark", "Buff"]
+},
+{
+    name: "DYPSO",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Ki Blast Cannon", "Gut Punch"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "TOPPO [BASE]",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],
+    skills: ["Buff", "Instant Spark"]
+},
+{
+    name: "TOPPO [GOD OF DESTRUCTION]",
+    rushChains: ["Blaster Wave", "Flying Kicks", "Rolling Hammer", "Gut Punch"],
+    skills: ["Buff", "Explosive Wave"]
+},
+{
+    name: "JIREN [BASE]",
+    rushChains: ["Ki Blast Cannon", "Gut Punch", "Flying Kicks", "Rolling Hammer"],
+    skills: ["Explosive Wave", "Regeneration"]
+},
+{
+    name: "JIREN [FULL POWER]",
+    rushChains: ["Blaster Wave", "Gut Punch", "Flying Kicks", "Rolling Hammer"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+
+{
+    name: "KALE [BASE]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Flying Kicks"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "KALE [SSJ]",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Gut Punch"],
+    skills: ["Explosive Wave", "Wild Sense"]
+},
+{
+    name: "KALE [SSJ BERSERK]",
+    rushChains: ["Ki Blast Canon", "Flying Kicks", "Rolling Hammer", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "CAULIFLA [BASE]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Canon"],
+    skills: ["Full Power", "Instant Spark"]
+},
+{
+    name: "CAULIFLA [SSJ2]",
+    rushChains: ["Ki Blast Canon", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "KEFLA [BASE]",
+    rushChains: ["Gut Punch", "Flying Kicks", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Paralysis", "Instant Spark"]
+},
+{
+    name: "KEFLA [SSJ]",
+    rushChains: ["Gut Punch", "Flying Kicks", "Ki Blast Canon", "Rolling Hammer"],
+    skills: ["Buff", "Wild Sense"]
+},
+{
+    name: "KEFLA [SSJ2]",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Flying Kicks", "Gut Punch"],
+    skills: ["Wild Sense", "Instant Spark"]
+},
+
+// Z Villains
+{
+    name: "RADITZ",
+    rushChains: ["Flying Kicks", "Gut Punch", "Blaster Wave", "Rolling Hammer"],
+    skills: ["Buff", "Instant Spark"]
+},
+{
+    name: "NAPPA",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Gut Punch"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "SAIBAMAN",
+    rushChains: ["Blaster Wave", "Flying Kicks", "Flying Kicks", "Gut Punch"],
+    skills: ["Paralysis", "Afterimage"]
+},
+{
+    name: "VEGETA (GREAT APE)",
+    rushChains: ["Blaster Wave", "Flying Kicks", "Flying Kicks", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "FRIEZA FORCE SOLDIER",
+    rushChains: ["Gut Punch", "Flying Kicks", "Flying Kicks", "Gut Punch"],
+    skills: ["Full Power", "Regeneration"]
+},
+{
+    name: "CUI",
+    rushChains: ["Blaster Wave", "Gut Punch", "Gut Punch", "Gut Punch"],
+    skills: ["Buff", "Regeneration"]
+},
+{
+    name: "ZARBON [BASE]",
+    rushChains: ["Gut Punch", "Ki Blast Canon", "Flying Kicks", "Gut Punch"],
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "ZARBON [MONSTER]",
+    rushChains: ["Gut Punch", "Blaster Wave", "Blaster Wave", "Rolling Hammer"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "DODORIA",
+    rushChains: ["Blaster Wave", "Rolling Hammer", "Rolling Hammer", "Gut Punch"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "GULDO",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Ki Blast Canon"],
+    skills: ["Paralysis", "Instant Spark"]
+},
+{
+    name: "BURTER",
+    rushChains: ["Gut Punch", "Flying Kicks", "Ki Blast Canon", "Rolling Hammer"],
+    skills: ["Afterimage", "Instant Spark"]
+},
+{
+    name: "JEICE",
+    rushChains: ["Rolling Hammer", "Flying Kicks", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "RECOOME",
+    rushChains: ["Blaster Wave", "Flying Kicks", "Ki Blast Canon", "Rolling Hammer"],
+    skills: ["Instant Spark", "Buff"]
+},
+{
+    name: "GINYU",
+    rushChains: ["Gut Punch", "Gut Punch", "Ki Blast Canon", "Rolling Hammer"],
+    skills: ["Instant Spark", "Buff"]
+},
+{
+    name: "FRIEZA (Z) [1st FORM]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Rolling Hammer"],
+    skills: ["Paralysis", "Buff"]
+},
+{
+    name: "FRIEZA (Z) [2nd FORM]",
+    rushChains: ["Gut Punch", "Flying Kicks", "Rolling Hammer", "Blaster Wave"],
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "FRIEZA (Z) [3rd FORM]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Gut Punch", "Flying Kicks"],
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "FRIEZA (Z) [4th FORM]",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Flying Kicks", "Gut Punch"],
+    skills: ["Paralysis", "Instant Spark"]
+},
+{
+    name: "FRIEZA (Z) [FULL POWER]",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Gut Punch"],
+    skills: ["Paralysis", "Instant Spark"]
+},
+{
+    name: "FRIEZA (Z) [MECHA]",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Rolling Hammer", "Gut Punch"],
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "KING COLD",
+    rushChains: ["Gut Punch", "Ki Blast Canon", "Rolling Hammer", "Rolling Hammer"],
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "BABIDI",
+    rushChains: ["Flying Kicks", "Ki Blast Canon", "Ki Blast Canon", "Rush Ki Wave"],
+    skills: ["Paralysis", "Explosive Wave"]
+},
+{
+    name: "SPOPOVICH",
+    rushChains: ["Gut Punch", "Ki Blast Canon", "Rolling Hammer", "Gut Punch"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "DABURA",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Ki Blast Canon", "Rush Ki Wave"],
+    skills: ["Mystic Breath", "Afterimage Strike"]
+},
+{
+    name: "EVIL BUU",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Rush Ki Wave", "Flying Kicks"],
+    skills: ["Paralysis", "Mystic Breath"]
+},
+{
+    name: "MAJIN BUU",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Paralysis", "Regeneration"]
+},
+{
+    name: "SUPER BUU",
+    rushChains: ["Gut Punch", "Ki Blast Canon", "Flying Kicks", "Rolling Hammer"],
+    skills: ["Paralysis", "Regeneration"]
+},
+{
+    name: "SUPER BUU (GOTENKS)",
+    rushChains: ["Ki Blast Canon", "Ki Blast Canon", "Flying Kicks", "Gut Punch"],
+    skills: ["Explosive Wave", "Regeneration"]
+},
+{
+    name: "SUPER BUU (GOHAN)",
+    rushChains: ["Gut Punch", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
+    skills: ["Afterimage", "Buff"]
+},
+{
+    name: "KID BUU",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Instant Transmission", "Regeneration"]
+},
+{
+    name: "UUB (GT)",
+    rushChains: ["Gut Punch", "Ki Blast Canon", "Flying Kicks", "Gut Punch"],
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "MAJUUB (GT)",
+    rushChains: ["Flying Kicks", "Ki Blast Canon", "Gut Punch", "Gut Punch"],
+    skills: ["Paralysis", "Mystic Breath"]
+},
+{
+    name: "ANDROID 16",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Rolling Hammer"],
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "ANDROID 17 (Z)",
+    rushChains: ["Gut Punch", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "ANDROID 17 (SUPER)",
+    rushChains: ["Rolling Hammer", "Gut Punch", "Gut Punch", "Flying Kicks"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "ANDROID 18",
+    rushChains: ["Gut Punch", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "ANDROID 19",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Gut Punch", "Rolling Hammer"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "DR. GERO",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Gut Punch"],
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "CELL [1st FORM]",
+    rushChains: ["Blaster Wave", "Rolling Hammer", "Gut Punch", "Gut Punch"],
+    skills: ["Solar Flare", "Afterimage"]
+},
+{
+    name: "CELL [2nd FORM]",
+    rushChains: ["Blaster Wave", "Gut Punch", "Blaster Wave", "Rolling Hammer"],
+    skills: ["Solar Flare", "Buff"]
+},
+{
+    name: "CELL [PERFECT FORM]",
+    rushChains: ["Flying Kicks", "Ki Blast Canon", "Gut Punch", "Gut Punch"],
+    skills: ["Explosive Wave", "Afterimage"]
+},
+{
+    name: "PERFECT CELL",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Rolling Hammer"],
+    skills: ["Instant Transmission", "Wild Sense"]
+},
+{
+    name: "CELL JR",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Solar Flare", "Explosive Wave"]
+},
+
+//The rest
+{
+    name: "PAN (GT)",
+    rushChains: ["Flying Kicks", "Gut Punch", "Flying Kicks", "Flying Kicks"],
+    skills: ["Afterimage Strike", "Buff"]
+},
+{
+    name: "GREAT APE BABY (GT)",
+    rushChains: ["Blaster Wave", "Rolling Hammer", "Gut Punch", ""],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "SYN SHENRON (GT)",
+    rushChains: ["Gut Punch", "Blaster Wave", "Rush Ki Wave", "Gut Punch"],
+    skills: ["Explosive Wave", "Mystic Breath"]
+},
+{
+    name: "OMEGA SHENRON (GT)",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Rush Ki Wave"],
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "ANILAZA",
+    rushChains: ["Rolling Hammer", "Ki Blast Canon", "Gut Punch", ""],
+    skills: ["Afterimage", "Instant Spark"]
 }
+
+
+
 
 
 ]; 
 
 // Variables for pagination
-let itemsPerPage = 300; // Default items per page
+let itemsPerPage = 20; // Default items per page
 let currentPage = 1; // Current page number
 let sortColumnIndex = null; // Track the column being sorted
 let sortAscending = true; // Track the sorting order
