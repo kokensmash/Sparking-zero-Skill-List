@@ -73,405 +73,486 @@ const characters = [
 
     //Goku's
   {
-        name: "GOKU (TEEN)",
-        rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Flying Kicks"],
-        skills: ["Afterimage Strike", "Buff"]
-    },
-    {
-        name: "GOKU (Z - EARLY)",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
-        skills: ["Solar Flare", "Buff"]
-    },
-    {
-        name: "GOKU (Z - MID) [BASE]",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
-        skills: ["Buff", "Buff"]
-    },
-    {
-        name: "GOKU (Z - MID) [SSJ]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
-        skills: ["Wild Sense", "Instant Spark"]
-    },
-    {
-        name: "GOKU (Z - END) [BASE]",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
-        skills: ["Instant Transmission", "Wild Sense"]
-    },
-    {
-        name: "GOKU (Z - END) [SSJ]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
-        skills: ["Wild Sense", "Buff"]
-    },
-    {
-        name: "GOKU (Z - END) [SSJ2]",
-        rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Gut Punch"],
-        skills: ["Instant Transmission", "Instant Spark"]
-    },
-    {
-        name: "GOKU (Z - END) [SSJ3]",
-        rushChains: ["Ki Blast Cannon", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
-        skills: ["Instant Transmission", "Instant Spark"]
-    },
-
-    {
-        name: "GOKU (GT) [BASE]",
-        rushChains: ["Flying Kicks", "Blaster Wave", "Gut Punch", "Flying Kicks"],
-        skills: ["Solar Flare", "Afterimage Strike"]
-    },
-    {
-        name: "GOKU (GT) [SSJ]",
-        rushChains: ["Flying Kicks", "Blaster Wave", "Gut Punch", "Flying Kicks"],
-        skills: ["Wild Sense", "Instant Spark"]
-    },
-    {
-        name: "GOKU (GT) [SSJ3]",
-        rushChains: ["Rolling Hammer", "Blaster Wave", "Gut Punch", "Flying Kicks"],
-        skills: ["Buff", "Buff"]
-    },
-    {
-        name: "GOKU (GT) [SSJ4]",
-        rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],
-        skills: ["Instant Transmission", "Buff"]
-    },
-    {
-        name: "GOKU (SUPER) [BASE]",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
-        skills: ["Instant Transmission", "Instant Spark"]
-    },
-    {
-        name: "GOKU (SUPER) [SSJ]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
-        skills: ["Wild Sense", "Buff"]
-    },
-    {
-        name: "GOKU (SUPER) [SSJ GOD]",
-        rushChains: ["Ki Blast Cannon", "Flying Kicks", "Rolling Hammer", "Gut Punch"],
-        skills: ["Paralysis", "Buff"]
-    },
-    {
-        name: "GOKU (SUPER) [SSJ GOD SS BLUE]",
-        rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],
-        skills: ["Instant Transmission", "Buff"]
-    },
-    {
-        name: "GOKU (SUPER) UI -SIGN-",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kick", "Gut Punch"],
-        skills: ["Buff", "Instant Spark"]
-    },
-    {
-        name: "GOKU (SUPER MASTERED UI)",
-        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
-        skills: ["Wild Sense", "Instant Spark"]
-    },
-    {
-        name: "GOKU (MINI)",
-        rushChains: ["Flying Kicks", "Gut Punch", "Gut Punch", "Flying Kicks"],
-        skills: ["Regeneration", "Buff"]
-    },
-    {
-        name: "GOKU BLACK [BASE]",
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
-        skills: ["Wild Sense", "Buff"]
-    },
-    {
-        name: "GOKU BLACK [SSJ ROSÉ]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"],
-        skills: ["Instant Transmission", "Instant Spark"]
-    },
-    {
-        name: "BARDOCK",
-        rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
-        skills: ["Instant Spark", "Buff"]
-    },
-    {
-        name: "TURLES",
-        rushChains: ["Gut Punch", "Blaster Wave", "Gut Punch", "Gut Punch"],
-        skills: ["Explosive Wave", "Buff"]
-    },
-    {
-        name: "GOTEN (BASE)",
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
-        skills: ["Afterimage", "Regeneration"]
-    },
-    {
-        name: "GOTEN (SSJ)",
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
-        skills: ["Wild Sense", "Buff"]
-    },
+    name: "GOKU (TEEN)",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Flying Kicks"],
+    stepIn: "Gut Punch",
+    skills: ["Afterimage Strike", "Buff"]
+},
+{
+    name: "GOKU (Z - EARLY)",
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Solar Flare", "Buff"]
+},
+{
+    name: "GOKU (Z - MID) [BASE]",
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "GOKU (Z - MID) [SSJ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
+    stepIn: "Gut Punch",
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "GOKU (Z - END) [BASE]",
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Instant Transmission", "Wild Sense"]
+},
+{
+    name: "GOKU (Z - END) [SSJ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
+    stepIn: "Ki Blast Canon",
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "GOKU (Z - END) [SSJ2]",
+    rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Instant Transmission", "Instant Spark"]
+},
+{
+    name: "GOKU (Z - END) [SSJ3]",
+    rushChains: ["Ki Blast Cannon", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
+    stepIn: "Gut Punch",
+    skills: ["Instant Transmission", "Instant Spark"]
+},
+{
+    name: "GOKU (GT) [BASE]",
+    rushChains: ["Flying Kicks", "Blaster Wave", "Gut Punch", "Flying Kicks"],
+    stepIn: "Ki Blast Canon",
+    skills: ["Solar Flare", "Afterimage Strike"]
+},
+{
+    name: "GOKU (GT) [SSJ]",
+    rushChains: ["Flying Kicks", "Blaster Wave", "Gut Punch", "Flying Kicks"],
+    stepIn: "Gut Punch",
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "GOKU (GT) [SSJ3]",
+    rushChains: ["Rolling Hammer", "Blaster Wave", "Gut Punch", "Flying Kicks"],
+    stepIn: "Rolling Hammer",
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "GOKU (GT) [SSJ4]",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],
+    stepIn: "Flying Kicks",
+    skills: ["Instant Transmission", "Buff"]
+},
+{
+    name: "GOKU (SUPER) [BASE]",
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+    stepIn: "Flying Kicks",
+    skills: ["Instant Transmission", "Instant Spark"]
+},
+{
+    name: "GOKU (SUPER) [SSJ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
+    stepIn: "Gut Punch",
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "GOKU (SUPER) [SSJ GOD]",
+    rushChains: ["Ki Blast Cannon", "Flying Kicks", "Rolling Hammer", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Paralysis", "Buff"]
+},
+{
+    name: "GOKU (SUPER) [SSJ GOD SS BLUE]",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],
+    stepIn: "Ki Blast Canon",
+    skills: ["Instant Transmission", "Buff"]
+},
+{
+    name: "GOKU (SUPER) UI -SIGN-",
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kick", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Buff", "Instant Spark"]
+},
+{
+    name: "GOKU (SUPER MASTERED UI)",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Cannon"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "GOKU (MINI)",
+    rushChains: ["Flying Kicks", "Gut Punch", "Gut Punch", "Flying Kicks"],
+    stepIn: "Rolling Hammer",
+    skills: ["Regeneration", "Buff"]
+},
+{
+    name: "GOKU BLACK [BASE]",
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Flying Kicks", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "GOKU BLACK [SSJ ROSÉ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"],
+    stepIn: "Gut Punch",
+    skills: ["Instant Transmission", "Instant Spark"]
+},
+{
+    name: "BARDOCK",
+    rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
+    stepIn: "Gut Punch",
+    skills: ["Instant Spark", "Buff"]
+},
+{
+    name: "TURLES",
+    rushChains: ["Gut Punch", "Blaster Wave", "Gut Punch", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "GOTEN (BASE)",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
+    stepIn: "Ki Blast Canon",
+    skills: ["Afterimage", "Regeneration"]
+},
+{
+    name: "GOTEN (SSJ)",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],
+    stepIn: "Gut Punch",
+    skills: ["Wild Sense", "Buff"]
+},
 
     // Vegeta's
-    { 
-        name: "VEGETA (SCOUTER)", 
-        rushChains: ["Gut Punch", "Flying Kicks", "Rush Ki Wave", "Gut Punch"], 
-        skills: ["Explosive Wave", "Buff"] 
-    },
-    { 
-        name: "VEGETA (Z - EARLY) [BASE]", 
-        rushChains: ["Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks", "Gut Punch"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
-    },
-    { 
-        name: "VEGETA (Z - EARLY) [SSJ]", 
-        rushChains: ["Ki Blast Cannon", "Gut Punch", "Flying Kicks", "Rush Ki Wave"], 
-        skills: ["Explosive Wave", "Buff"] 
-    },
-    { 
-        name: "VEGETA (Z - EARLY) [Super Vegeta]", 
-        rushChains: ["Blaster Wave", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
-    },
-    { 
-        name: "VEGETA (Z - END) [BASE]", 
-        rushChains: ["Gut Punch", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"], 
-        skills: ["Afterimage", "Buff"] 
-    },
-    { 
-        name: "VEGETA (Z - END) [SSJ]", 
-        rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Ki Blast Cannon"], 
-        skills: ["Explosive Wave", "Buff"] 
-    },
-    { 
-        name: "VEGETA (Z - END) [SSJ2]", 
-        rushChains: ["Flying Kicks", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"], 
-        skills: ["Explosive Wave", "Wild Sense"] 
-    },
-    { 
-        name: "VEGETA (Z - END) [MAJIN]", 
-        rushChains: ["Gut Punch", "Gut Punch", "Ki Blast Cannon", "Rush Ki Wave"], 
-        skills: ["Buff", "Instant Spark"] 
-    },
-    { 
-        name: "VEGETA (GT) [SSJ4]", 
-        rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"], 
-        skills: ["Explosive Wave", "Buff"] 
-    },
-    { 
-        name: "VEGETA (SUPER) [BASE]", 
-        rushChains: ["Ki Blast Cannon", "Gut Punch", "Flying Kicks", "Rush Ki Wave"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
-    },
-    { 
-        name: "VEGETA (SUPER) [SSJ]", 
-        rushChains: ["Gut Punch", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"], 
-        skills: ["Buff", "Instant Spark"] 
-    },
-    { 
-        name: "VEGETA (SUPER) [SSJ GOD]", 
-        rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Ki Blast Cannon"], 
-        skills: ["Explosive Wave", "Buff"] 
-    },
-    { 
-        name: "VEGETA (SUPER) [SSJ GOD SS BLUE]", 
-        rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Gut Punch"], 
-        skills: ["Buff", "Buff"] 
-    },
-    { 
-        name: "CABBA [BASE]", 
-        rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Ki Blast Cannon"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
-    },
-    { 
-        name: "CABBA [SSJ]", 
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "Gut Punch"], 
-        skills: ["Explosive Wave", "Wild Sense"] 
-    },
-    { 
-        name: "CABBA [SSJ2]", 
-        rushChains: ["Gut Punch", "Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
-    },
-    { 
-        name: "BABY VEGETA (GT)", 
-        rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "Gut Punch"], 
-        skills: ["Explosive Wave", "Buff"] 
-    },
-    { 
-        name: "SUPER BABY 1 (GT)", 
-        rushChains: ["Flying Kicks", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"], 
-        skills: ["Afterimage", "Buff"] 
-    },
-    { 
-        name: "SUPER BABY 2 (GT)", 
-        rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
-    },
+   {
+    name: "VEGETA (SCOUTER)",
+    rushChains: ["Gut Punch", "Flying Kicks", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "VEGETA (Z - EARLY) [BASE]",
+    rushChains: ["Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "VEGETA (Z - EARLY) [SSJ]",
+    rushChains: ["Ki Blast Cannon", "Gut Punch", "Flying Kicks", "Rush Ki Wave"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "VEGETA (Z - EARLY) [Super Vegeta]",
+    rushChains: ["Blaster Wave", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "VEGETA (Z - END) [BASE]",
+    rushChains: ["Gut Punch", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Afterimage", "Buff"]
+},
+{
+    name: "VEGETA (Z - END) [SSJ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Ki Blast Cannon"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "VEGETA (Z - END) [SSJ2]",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Explosive Wave", "Wild Sense"]
+},
+{
+    name: "VEGETA (Z - END) [MAJIN]",
+    rushChains: ["Gut Punch", "Gut Punch", "Ki Blast Cannon", "Rush Ki Wave"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Buff", "Instant Spark"]
+},
+{
+    name: "VEGETA (GT) [SSJ4]",
+    rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "VEGETA (SUPER) [BASE]",
+    rushChains: ["Ki Blast Cannon", "Gut Punch", "Flying Kicks", "Rush Ki Wave"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "VEGETA (SUPER) [SSJ]",
+    rushChains: ["Gut Punch", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Buff", "Instant Spark"]
+},
+{
+    name: "VEGETA (SUPER) [SSJ GOD]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Ki Blast Cannon"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "VEGETA (SUPER) [SSJ GOD SS BLUE]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "CABBA [BASE]",
+    rushChains: ["Flying Kicks", "Flying Kicks", "Gut Punch", "Ki Blast Cannon"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "CABBA [SSJ]",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Wild Sense"]
+},
+{
+    name: "CABBA [SSJ2]",
+    rushChains: ["Gut Punch", "Ki Blast Cannon", "Rush Ki Wave", "Flying Kicks"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "BABY VEGETA (GT)",
+    rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "SUPER BABY 1 (GT)",
+    rushChains: ["Flying Kicks", "Rush Ki Wave", "Ki Blast Cannon", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Afterimage", "Buff"]
+},
+{
+    name: "SUPER BABY 2 (GT)",
+    rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Instant Spark"]
+},
 
 //Gogeta/vegitos
 
 {
-        name: "VEGITO [BASE]",
-        rushChains: ["Gut Punch", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
-        skills: ["Explosive Wave", "Buff"]
-    },
-    {
-        name: "VEGITO [SSJ]",
-        rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
-        skills: ["Afterimage Strike", "Buff"]
-    },
-    {
-        name: "VEGITO [SSJ GOD SS]",
-        rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
-        skills: ["Buff", "Full Power"]
-    },
-    {
-        name: "SUPER GOGETA [Z]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Rolling Hammer"],
-        skills: ["Buff", "Buff"]
-    },
-    {
-        name: "GOGETA (GT) [SSJ4]",
-        rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Rolling Hammer"],
-        skills: ["Wild Sense", "Instant Spark"]
-    },
-    {
-        name: "GOGETA (SUPER) [BASE]",
-        rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
-        skills: ["Wild Sense", "Instant Spark"]
-    },
-    {
-        name: "GOGETA (SUPER) [SSJ]",
-        rushChains: ["Gut Punch", "Blaster Wave", "Rolling Hammer", "Flying Kicks"],
-        skills: ["Instant Transmission", "Buff"]
-    },
-    {
-        name: "GOGETA (SUPER) [SSJ GOD SS]",
-        rushChains: ["Blaster Wave", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
-        skills: ["Instant Transmission", "Explosive Wave"]
-    },
+    name: "VEGITO [BASE]",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Buff"]
+},
+{
+    name: "VEGITO [SSJ]",
+    rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
+    skills: ["Afterimage Strike", "Buff"]
+},
+{
+    name: "VEGITO [SSJ GOD SS]",
+    rushChains: ["Rush Ki Wave", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"],
+    stepIn: "Gut Punch",
+    skills: ["Buff", "Full Power"]
+},
+{
+    name: "SUPER GOGETA [Z]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Rolling Hammer"],
+    stepIn: "Rolling Hammer",
+    skills: ["Buff", "Buff"]
+},
+{
+    name: "GOGETA (GT) [SSJ4]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Rolling Hammer"],
+    stepIn: "Gut Punch",
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "GOGETA (SUPER) [BASE]",
+    rushChains: ["Ki Blast Cannon", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
+    stepIn: "Ki Blast Canon",
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "GOGETA (SUPER) [SSJ]",
+    rushChains: ["Gut Punch", "Blaster Wave", "Rolling Hammer", "Flying Kicks"],
+    stepIn: "Rolling Hammer",
+    skills: ["Instant Transmission", "Buff"]
+},
+{
+    name: "GOGETA (SUPER) [SSJ GOD SS]",
+    rushChains: ["Blaster Wave", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
+    stepIn: "Rolling Hammer",
+    skills: ["Instant Transmission", "Explosive Wave"]
+},
+
 	//Movies
 {
-        name: "SUPER GARLIC JR.",
-        rushChains: ["Gut Punch", "Rolling Hammer", "Rolling Hammer", "Ki Blast Canon"],
-        skills: ["Paralysis", "Buff"]
-    },
-    {
-        name: "DR. WHEELO",
-        rushChains: ["Gut Punch", "Blaster Wave", "Rolling Hammer", ""], // Empty string for missing Rush String 4
-        skills: ["Explosive Wave", "Instant Spark"]
-    },
-    {
+    name: "SUPER GARLIC JR.",
+    rushChains: ["Gut Punch", "Rolling Hammer", "Rolling Hammer", "Ki Blast Canon"],
+    stepIn: "Rolling Hammer",
+    skills: ["Paralysis", "Buff"]
+},
+{
+    name: "DR. WHEELO",
+    rushChains: ["Gut Punch", "Blaster Wave", "Rolling Hammer", ""], // Empty string for missing Rush String 4
+    stepIn: "Gut Punch",
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
     name: "LORD SLUG",
     rushChains: ["Gut Punch", "Gut Punch", "Blaster Wave", "Rolling Hammer"],
+    stepIn: "Gut Punch",
     skills: ["Explosive Wave", "Buff"]
 },
 {
     name: "LORD SLUG (GIANT FORM)",
     rushChains: ["Gut Punch", "Gut Punch", "Blaster Wave", ""],
+    stepIn: "Rolling Hammer",
     skills: ["Explosive Wave", "Buff"]
 },
 {
     name: "COOLER [BASE]",
     rushChains: ["Rolling Hammer", "Gut Punch", "Flying Kicks", "Rush Ki Wave"],
+    stepIn: "Rush Ki Wave",
     skills: ["Paralysis", "Afterimage"]
 },
 {
     name: "COOLER [FINAL FORM]",
     rushChains: ["Flying Kicks", "Gut Punch", "Flying Kicks", "Rush Ki Wave"],
+    stepIn: "Rush Ki Wave",
     skills: ["Paralysis", "Explosive Wave"]
 },
 {
     name: "COOLER [METAL]",
     rushChains: ["Flying Kicks", "Flying Kicks", "Rush Ki Wave", "Rolling Hammer"],
+    stepIn: "Rush Ki Wave",
     skills: ["Instant Transmission", "Regeneration"]
 },
 {
     name: "ANDROID 13",
     rushChains: ["Gut Punch", "Gut Punch", "Flying Kicks", "Gut Punch"],
+    stepIn: "Gut Punch",
     skills: ["Wild Sense", "Buff"]
 },
 {
     name: "ANDROID 13 [FUSED]",
     rushChains: ["Flying Kicks", "Rolling Hammer", "Rolling Hammer", "Gut Punch"],
+    stepIn: "Rolling Hammer",
     skills: ["Explosive Wave", "Buff"]
 },
 {
     name: "BROLY (Z) [BASE]",
     rushChains: ["Gut Punch", "Ki Blast Canon", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Ki Blast Canon",
     skills: ["Explosive Wave", "Instant Spark"]
 },
 {
     name: "BROLY (Z) [SSJ]",
     rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Rush Ki Wave"],
+    stepIn: "Gut Punch",
     skills: ["Explosive Wave", "Instant Spark"]
 },
 {
     name: "BROLY (Z) [LSSJ]",
     rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Rush Ki Wave"],
+    stepIn: "Rush Ki Wave",
     skills: ["Explosive Wave", "Instant Spark"]
 },
 {
     name: "BOJACK [BASE]",
     rushChains: ["Gut Punch", "Gut Punch", "Rolling Hammer", "Gut Punch"],
+    stepIn: "Gut Punch",
     skills: ["Explosive Wave", "Buff"]
 },
 {
     name: "BOJACK [FULL POWER]",
     rushChains: ["Blaster Wave", "Rolling Hammer", "Gut Punch", "Gut Punch"],
+    stepIn: "Rolling Hammer",
     skills: ["Explosive Wave", "Instant Spark"]
 },
 {
     name: "JANEMBA",
     rushChains: ["Rolling Hammer", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Rush Ki Wave",
     skills: ["Mystic Breath", "Instant Spark"]
 },
 {
     name: "JANEMBA [SWORD]",
     rushChains: ["Rolling Hammer", "Flying Kicks", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Ki Blast Canon",
     skills: ["Explosive Wave", "Dodge"]
 },
 {
     name: "HIRUDEGARN",
     rushChains: ["Rolling Hammer", "Blaster Wave", "Gut Punch", ""],
+    stepIn: "Gut Punch",
     skills: ["Explosive Wave", "Afterimage"]
 },
 {
     name: "TAPION",
     rushChains: ["Gut Punch", "Flying Kicks", "Ki Blast Canon", "Rolling Hammer"],
+    stepIn: "Gut Punch",
     skills: ["Explosive Wave", "Afterimage"]
 },
 
+
 // Super Villains
 
+// Super Villains
 {
     name: "FRIEZA (SUPER) [BASE]",
     rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Rolling Hammer"],
+    stepIn: "Gut Punch",
     skills: ["Paralysis", "Buff"]
 },
 {
     name: "FRIEZA (SUPER) [GOLDEN]",
     rushChains: ["Blaster Wave", "Flying Kicks", "Rolling Hammer", "Gut Punch"],
+    stepIn: "Gut Punch",
     skills: ["Wild Sense", "Instant Spark"]
 },
 {
     name: "ZAMASU",
     rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Canon"],
+    stepIn: "Gut Punch",
     skills: ["Regen", "Buff"]
 },
 {
     name: "FUSED ZAMASU [BASE]",
     rushChains: ["Gut Punch", "Ki Blast Canon", "Flying Kicks", "Rolling Hammer"],
+    stepIn: "Ki Blast Canon",
     skills: ["Regen", "Instant Spark"]
 },
 {
     name: "FUSED ZAMASU [HALF-CORRUPTED]",
     rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Ki Blast Canon"],
+    stepIn: "Rolling Hammer",
     skills: ["Explosive Wave", "Instant Spark"]
 },
 {
     name: "BROLY (SUPER) [BASE]",
     rushChains: ["Gut Punch", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"],
+    stepIn: "Gut Punch",
     skills: ["Full Power", "Instant Spark"]
 },
 {
     name: "BROLY (SUPER) [SSJ]",
     rushChains: ["Gut Punch", "Ki Blast Canon", "Rolling Hammer", "Gut Punch"],
+    stepIn: "Gut Punch",
     skills: ["Buff", "Instant Spark"]
 },
 {
     name: "BROLY (SUPER) [LSSJ]",
     rushChains: ["Gut Punch", "Rolling Hammer", "Blaster Wave", "Rolling Hammer"],
+    stepIn: "Rolling Hammer",
     skills: ["Instant Transmission", "Instant Spark"]
 },
+
 
 //trunks+Gotenks
 
