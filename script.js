@@ -391,6 +391,7 @@ const characters = [
 },
 
 	//Movies
+// Z Movie Villains
 {
     name: "SUPER GARLIC JR.",
     rushChains: ["Gut Punch", "Rolling Hammer", "Rolling Hammer", "Ki Blast Canon"],
@@ -399,20 +400,20 @@ const characters = [
 },
 {
     name: "DR. WHEELO",
-    rushChains: ["Gut Punch", "Blaster Wave", "Rolling Hammer", ""], // Empty string for missing Rush String 4
-    stepIn: "Gut Punch",
+    rushChains: ["Gut Punch", "Blaster Wave", "Rolling Hammer", ""],
+    stepIn: "",
     skills: ["Explosive Wave", "Instant Spark"]
 },
 {
     name: "LORD SLUG",
     rushChains: ["Gut Punch", "Gut Punch", "Blaster Wave", "Rolling Hammer"],
-    stepIn: "Gut Punch",
+    stepIn: "Rolling Hammer",
     skills: ["Explosive Wave", "Buff"]
 },
 {
     name: "LORD SLUG (GIANT FORM)",
     rushChains: ["Gut Punch", "Gut Punch", "Blaster Wave", ""],
-    stepIn: "Rolling Hammer",
+    stepIn: "",
     skills: ["Explosive Wave", "Buff"]
 },
 {
@@ -478,32 +479,34 @@ const characters = [
 {
     name: "JANEMBA",
     rushChains: ["Rolling Hammer", "Rolling Hammer", "Rush Ki Wave", "Gut Punch"],
-    stepIn: "Rush Ki Wave",
+    stepIn: "",
     skills: ["Mystic Breath", "Instant Spark"]
 },
 {
     name: "JANEMBA [SWORD]",
     rushChains: ["Rolling Hammer", "Flying Kicks", "Rush Ki Wave", "Gut Punch"],
-    stepIn: "Ki Blast Canon",
+    stepIn: "Rush Ki Wave",
     skills: ["Explosive Wave", "Dodge"]
 },
 {
     name: "HIRUDEGARN",
     rushChains: ["Rolling Hammer", "Blaster Wave", "Gut Punch", ""],
-    stepIn: "Gut Punch",
+    stepIn: "",
     skills: ["Explosive Wave", "Afterimage"]
 },
 {
     name: "TAPION",
     rushChains: ["Gut Punch", "Flying Kicks", "Ki Blast Canon", "Rolling Hammer"],
-    stepIn: "Gut Punch",
+    stepIn: "Ki Blast Canon",
     skills: ["Explosive Wave", "Afterimage"]
 },
 
 
-// Super Villains
+
+
 
 // Super Villains
+
 {
     name: "FRIEZA (SUPER) [BASE]",
     rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Rolling Hammer"],
