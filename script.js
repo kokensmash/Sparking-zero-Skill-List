@@ -4,60 +4,71 @@ const characters = [
  //Gohan's
 
 
-    { 
-        name: "GOHAN (ADULT) [BASE]", 
-        rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Gut Punch"], 
-        skills: ["Wild Sense", "Full Power"] 
-    },
-    { 
-        name: "GOHAN (ADULT) [SSJ]", 
-        rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Gut Punch"], 
-        skills: ["Explosive Wave", "Full Power"] 
-    },
-    { 
-        name: "GOHAN (ADULT) [SSJ2]", 
-        rushChains: ["Flying Kicks", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"], 
-        skills: ["Explosive Wave", "Instant Spark"] 
-    },
+   { 
+    name: "GOHAN (ADULT) [BASE]", 
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Gut Punch"], 
+    stepIn: "Gut Punch", 
+    skills: ["Wild Sense", "Full Power"]
+},
+{ 
+    name: "GOHAN (ADULT) [SSJ]", 
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Cannon", "Gut Punch"], 
+    stepIn: "Gut Punch", 
+    skills: ["Explosive Wave", "Full Power"]
+},
+{ 
+    name: "GOHAN (ADULT) [SSJ2]", 
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Ki Blast Cannon", "Gut Punch"], 
+    stepIn: "Gut Punch", 
+    skills: ["Explosive Wave", "Instant Spark"]
+},
 { 
     name: "GOHAN (KID)",  
     rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],  
-    skills: ["Instant Spark", "Afterimage Strike"]  
+    stepIn: "Flying Kicks", 
+    skills: ["Instant Spark", "Afterimage Strike"]
 }, 
 { 
     name: "GOHAN (TEEN) [BASE]",  
     rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],  
-    skills: ["Wild Sense", "Full Power"]  
+    stepIn: "Flying Kicks", 
+    skills: ["Wild Sense", "Full Power"]
 }, 
 { 
     name: "GOHAN (TEEN) [SSJ]",  
     rushChains: ["Flying Kicks", "Ki Blast Cannon", "Gut Punch", "Flying Kicks"],  
-    skills: ["Explosive Wave", "Instant Spark"]  
+    stepIn: "Flying Kicks", 
+    skills: ["Explosive Wave", "Instant Spark"]
 }, 
 { 
     name: "GOHAN (TEEN) [SSJ2]",  
     rushChains: ["Gut Punch", "Ki Blast Cannon", "Gut Punch", "Heavy Crush"],  
-    skills: ["Wild Sense", "Instant Spark"]  
+    stepIn: "Gut Punch", 
+    skills: ["Wild Sense", "Instant Spark"]
 }, 
 { 
     name: "GOHAN (ADULT) [ULTIMATE]",  
     rushChains: ["Flying Kicks", "Ki Blast Cannon", "Rolling Hammer", "Gut Punch"],  
-    skills: ["Wild Sense", "Full Power"]  
+    stepIn: "Gut Punch", 
+    skills: ["Wild Sense", "Full Power"]
 }, 
 { 
     name: "GOHAN (FUTURE) [BASE]",  
     rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Flying Kicks"],  
-    skills: ["Explosive Wave", "Instant Spark"]  
+    stepIn: "Rolling Hammer", 
+    skills: ["Explosive Wave", "Instant Spark"]
 }, 
 { 
     name: "GOHAN (FUTURE) [SSJ]",  
     rushChains: ["Flying Kicks", "Gut Punch", "Rolling Hammer", "Rush Ki Wave"],  
-    skills: ["Explosive Wave", "Instant Spark"]  
+    stepIn: "Rush Ki Wave", 
+    skills: ["Explosive Wave", "Instant Spark"]
 }, 
 { 
     name: "GREAT SAIYAMAN",  
     rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Cannon"],  
-    skills: ["Buff", "Buff"]  
+    stepIn: "Gut Punch", 
+    skills: ["Buff", "Buff"]
 },
 
     //Goku's
@@ -1035,7 +1046,7 @@ function toggleDropdowns() {
     document.querySelectorAll(".or-button").forEach(button => (button.disabled = hasActiveCheckbox));
 }
 
-// Main function to display characters
+//Main function to Display Characters
 function displayCharacters() {
     const characterList = document.getElementById("characterList");
     characterList.innerHTML = "";
@@ -1049,6 +1060,7 @@ function displayCharacters() {
         rush2: [normalizeString(document.getElementById("rush2").value)],
         rush3: [normalizeString(document.getElementById("rush3").value)],
         rush4: [normalizeString(document.getElementById("rush4").value)],
+        stepIn: [normalizeString(document.getElementById("stepIn").value)], // Step-In filter
         skill1: [normalizeString(document.getElementById("skill1").value)],
         skill2: [normalizeString(document.getElementById("skill2").value)],
     };
@@ -1058,6 +1070,7 @@ function displayCharacters() {
     document.querySelectorAll("#rush2-or-group select").forEach(select => filters.rush2.push(normalizeString(select.value)));
     document.querySelectorAll("#rush3-or-group select").forEach(select => filters.rush3.push(normalizeString(select.value)));
     document.querySelectorAll("#rush4-or-group select").forEach(select => filters.rush4.push(normalizeString(select.value)));
+    document.querySelectorAll("#stepIn-or-group select").forEach(select => filters.stepIn.push(normalizeString(select.value))); // Step-In OR options
     document.querySelectorAll("#skill1-or-group select").forEach(select => filters.skill1.push(normalizeString(select.value)));
     document.querySelectorAll("#skill2-or-group select").forEach(select => filters.skill2.push(normalizeString(select.value)));
 
@@ -1074,12 +1087,16 @@ function displayCharacters() {
         const rush3Match = filters.rush3.includes("") || filters.rush3.includes(normalizeString(character.rushChains[2]));
         const rush4Match = filters.rush4.includes("") || filters.rush4.includes(normalizeString(character.rushChains[3]));
 
+        const stepInMatch = filters.stepIn.includes("") || 
+                    filters.stepIn.some(filter => filter === normalizeString(character.stepIn || ""));
+ // Step-In Match
+
         const skillFilters = [...filters.skill1, ...filters.skill2].filter(skill => skill !== "");
         const skillsMatch =
             skillFilters.length === 0 ||
             skillFilters.every(skill => character.skills.map(normalizeString).includes(skill));
 
-        return nameMatch && hasMatchingCheckbox && rush1Match && rush2Match && rush3Match && rush4Match && skillsMatch;
+        return nameMatch && hasMatchingCheckbox && rush1Match && rush2Match && rush3Match && rush4Match && stepInMatch && skillsMatch;
     });
 
     // Sorting logic if any column is selected
@@ -1093,9 +1110,8 @@ function displayCharacters() {
         });
     }
 
-    // Paginate and display characters
-    const totalItems = filteredCharacters.length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    // Pagination and rendering logic
+    const totalPages = Math.ceil(filteredCharacters.length / itemsPerPage);
     currentPage = Math.min(currentPage, totalPages || 1);
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
@@ -1110,13 +1126,14 @@ function displayCharacters() {
                 <td>${character.rushChains[1]}</td>
                 <td>${character.rushChains[2]}</td>
                 <td>${character.rushChains[3]}</td>
+                <td>${character.stepIn}</td>
                 <td>${character.skills[0]}</td>
                 <td>${character.skills[1]}</td>
             `;
             characterList.appendChild(row);
         });
     } else {
-        characterList.innerHTML = `<tr><td colspan="7" style="text-align:center;">No characters found</td></tr>`;
+        characterList.innerHTML = `<tr><td colspan="8" style="text-align:center">No characters found.</td></tr>`;
     }
 
     updatePaginationControls(totalPages);
