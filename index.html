@@ -88,6 +88,21 @@
         </div>
         <div class="special-filters">
             <div>
+<div>
+    <label for="stepIn">Step In:</label>
+    <select id="stepIn">
+        <option value="">Any</option>
+        <option value="Flying Kicks">Flying Kicks</option>
+        <option value="Gut Punch">Gut Punch</option>
+        <option value="Ki Blast Cannon">Ki Blast Cannon</option>
+        <option value="Rolling Hammer">Rolling Hammer</option>
+        <option value="Rush Ki Wave">Rush Ki Wave</option>
+        <option value="Blaster Wave">Blaster Wave</option>
+    </select>
+    <button class="or-button" onclick="addOrOption('stepIn')">+ Add OR</button>
+</div>
+<div id="stepIn-or-group" class="or-group"></div>
+
     <label for="skill1">Skill 1:</label>
     <select id="skill1">
         <option value="">Any</option>
@@ -141,6 +156,7 @@
         <th onclick="sortTable(2)" style="cursor:pointer;">Rush String 2 ▲▼</th>
         <th onclick="sortTable(3)" style="cursor:pointer;">Rush String 3 ▲▼</th>
         <th onclick="sortTable(4)" style="cursor:pointer;">Rush String 4 ▲▼</th>
+	<th onclick="sortTable(5)" style="cursor:pointer;">Step-In </th>
         <th onclick="sortTable(5)" style="cursor:pointer;">Skill 1 </th>
         <th onclick="sortTable(6)" style="cursor:pointer;">Skill 2 </th>
     </tr>
