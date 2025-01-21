@@ -933,6 +933,64 @@ const characters = [
     name: "ANILAZA",
     rushChains: ["Rolling Hammer", "Ki Blast Canon", "Gut Punch", ""],
     skills: ["Afterimage", "Instant Spark"]
+},
+
+//DLC
+
+{
+    name: "GOHAN (SUPER HERO) [BASE]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Afterimage", "Full Power"]
+},
+{
+    name: "GOHAN (SUPER HERO) [SSJ]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Explosive Wave", "Full Power"]
+},
+{
+    name: "GOHAN (SUPER HERO) [ULTIMATE]",
+    rushChains: ["Flying Kicks", "Gut Punch", "Ki Blast Canon", "Rolling Hammer"],
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "GOHAN (SUPER HERO) [BEAST]",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Ki Blast Canon", "Gut Punch"],
+    skills: ["Wild Sense", "Instant Spark"]
+},
+{
+    name: "PICCOLO (SUPER HERO)",
+    rushChains: ["Ki Blast Canon", "Flying Kicks", "Gut Punch", "Rolling Hammer"],
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "PICCOLO (SUPER HERO) [POWER AWAKENING]",
+    rushChains: ["Gut Punch", "Ki Blast Canon", "Gut Punch", "Rolling Hammer"],
+    skills: ["Wild Sense", "Buff"]
+},
+{
+    name: "PICCOLO (SUPER HERO) [ORANGE]",
+    rushChains: ["Gut Punch", "Blaster Wave", "Rolling Hammer", "Ki Blast Canon"],
+    skills: ["Buff", "Instant Spark"]
+},
+{
+    name: "PICCOLO (SUPER HERO) [GIANT ORANGE]",
+    rushChains: ["Rolling Hammer", "Blaster Wave", "Gut Punch", ""],
+    skills: ["Explosive Wave", "Instant Spark"]
+},
+{
+    name: "GAMMA 1",
+    rushChains: ["Flying Kicks", "Rolling Hammer", "Gut Punch", "Ki Blast Canon"],
+    skills: ["Buff", "Explosive Wave"]
+},
+{
+    name: "GAMMA 2",
+    rushChains: ["Blaster Wave", "Gut Punch", "Rolling Hammer", "Flying Kicks"],
+    skills: ["Buff", "Explosive Wave"]
+},
+{
+    name: "CELL MAX",
+    rushChains: ["Blaster Wave", "Rolling Hammer", "Gut Punch", ""],
+    skills: ["Explosive Wave", "Instant Spark"]
 }
 
 
