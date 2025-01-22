@@ -1218,6 +1218,10 @@ function addOrOption(id) {
     const select = document.createElement("select");
     select.innerHTML = document.getElementById(id).innerHTML;
     group.appendChild(select);
+
+ // Automatically refresh the table when an OR option is added
+    select.addEventListener("change", displayCharacters);
+    displayCharacters(); // Trigger table refresh immediately after adding the OR
 }
 
 // Function to reset all filters
